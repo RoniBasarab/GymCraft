@@ -1,6 +1,6 @@
-# Notes (0.1.0)
+# Notes (0.2.0)
 
-One line per choice made while building task 1.
+One line per choice made while building task 1 and task 2. Task 2 needed no adaptation: the shipped engine compiled and all its tests passed as delivered.
 
 - Git had no identity, so the repo uses `Roni Basarab <RoniBasarab@users.noreply.github.com>` locally.
 - `local.properties` (untracked) points at `C:\Users\ronib\AppData\Local\Android\Sdk`; no SDK env var was set.

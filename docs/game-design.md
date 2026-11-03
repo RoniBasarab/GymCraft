@@ -70,7 +70,7 @@ The **weekly target is 3 sessions**.
   |---|---|
   | **Light** | ordinary weapons |
   | **Armored** | anti-armor weapons (×2) |
-  | **Swarm** | splash weapons (×1.5) |
+  | **Swarm** | splash weapons (×2, and one shot drops several) |
 
   The forecast names the week's main trait and what beats it.
 - **Battlefield:** your base on the left, the attackers come from the right. The HQ fights too (it shoots a little).
@@ -82,25 +82,49 @@ The **weekly target is 3 sessions**.
 - **First version:** you play **the Outpost** (humans). Season 1's attackers are **the Brood** (swarm), enemy only.
 - **Later:** the Brood and the Radiant (tech aliens) become playable; you pick your race at the start; the others attack.
 
-### The Outpost (first numbers; the simulation will tune them)
+### The Outpost (numbers tuned by the balance test, Task 2)
 
 | Building | Level | Unit | Cost | Health | Damage | Range | Speed | Trait | Special |
 |---|---|---|---|---|---|---|---|---|---|
-| Barracks | 1 | Rifleman | 50 | 40 | 6 / 0.8 s | 4 | 1.0 | Light | |
-| Barracks | 2 | Medic | 100 | 45 | heals 5/s | 3 | 1.0 | Light | Heals infantry |
-| Barracks | 3 | Rocketeer | 200 | 45 | 22 / 2.0 s | 5 | 0.9 | Light | ×2 vs Armored |
-| Motor Pool | 1 | Buggy | 50 | 60 | 5 / 0.5 s | 3 | 2.2 | Light | Fast |
-| Motor Pool | 2 | Tank | 100 | 160 | 18 / 2.2 s | 6 | 0.7 | Armored | Splash (×1.5 vs Swarm) |
-| Motor Pool | 3 | Walker | 200 | 260 | 14 / 1.2 s | 4 | 0.5 | Armored | |
-| HQ | | | | 1000 | 8 / 1.0 s | 6 | | | Never falls: at 0 the battle is lost, the HQ is besieged |
+| Barracks | 1 | Rifleman | 50 | 40 | 6 / 0.8 s | 3 | 1.0 | Light | |
+| Barracks | 2 | Medic | 100 | 45 | heals 6 / 1.0 s | 2.5 | 1.0 | Light | Heals infantry |
+| Barracks | 3 | Rocketeer | 200 | 100 | 72 / 1.5 s | 3.5 | 0.9 | Light | ×2 vs Armored |
+| Motor Pool | 1 | Buggy | 50 | 45 | 4 / 0.6 s | 2 | 2.2 | Light | Fast |
+| Motor Pool | 2 | Tank | 100 | 150 | 18 / 2.25 s | 4.5 | 0.7 | Armored | Splash 4, ×2 vs Swarm |
+| Motor Pool | 3 | Walker | 200 | 400 | 15 / 1.25 s | 2 | 0.5 | Armored | |
+| HQ | | | | 500 | 5 / 1.0 s | 4 | | | Never falls: at 0 the battle is lost, the HQ is besieged |
+
+**No overkill:** one shot drops at most one enemy unit, unless the weapon has splash (the Tank: up to 4). So a Rocketeer's rocket kills one Biter, not four: Rocketeers crack armor and are wasted on swarms, while Tanks shred swarms.
+
+Value per supply is balanced on health × damage per second ÷ cost². In a squad fight, strength grows with the square of numbers, so cheap units count double.
 
 ### The Brood, as the season-1 enemy
 
-| Unit | Health | Damage | Range | Speed | Trait |
-|---|---|---|---|---|---|
-| Biter | 22 | 4 / 0.6 s | melee | 1.6 | Swarm |
-| Spitter | 35 | 8 / 1.4 s | 4 | 1.0 | Light |
-| Brute | 220 | 20 / 1.6 s | melee | 0.6 | Armored |
+| Unit | Weight | Health | Damage | Range | Speed | Trait |
+|---|---|---|---|---|---|---|
+| Biter | 15 | 18 | 1.2 / 0.8 s | melee | 1.8 | Swarm |
+| Spitter | 30 | 24 | 6.3 / 1.4 s | 3 | 1.1 | Light |
+| Brute | 120 | 240 | 11.5 / 1.6 s | melee | 0.7 | Armored |
+
+**Waves:**
+- **The weekly boss** has a budget of 240 + 265 per week after the first (week 12: ×1.3), spent on Brood units. Each battle draws one main trait, which gets 65% of the budget. Brutes join from week 2.
+- **Raids** are 30% of that week's boss.
+
+**Measured over whole seasons** (the reference player, 40 seasons each, `BalanceTest`):
+
+| Pace | Boss win |
+|---|---|
+| 3 a week | ~85% |
+| 2 a week | ~55% |
+| 1 a week | ~5% |
+| 0 | 0% |
+
+**After a strong streak:**
+- one week off → that boss ~45%;
+- a second week off → ~10%;
+- two weeks after coming back → ~65%.
+
+**Warm-up:** a game started on any day but Sunday starts its season on the next Sunday. Sessions already count, and there are no battles before that.
 
 The Brood's other three units (Burster, an ambusher, Behemoth) and the Radiant come later.
 

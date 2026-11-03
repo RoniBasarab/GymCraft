@@ -1,6 +1,6 @@
 # GymCraft: planning handoff
 
-Last updated: 3 Nov 2026. For the planning agent (a Claude chat with Roni). The working agent doesn't read this file.
+Last updated: 3 Nov 2026 (after Task-1; Task-2 written). For the planning agent (a Claude chat with Roni). The working agent doesn't read this file.
 
 ## People and flow
 
@@ -34,13 +34,12 @@ Last updated: 3 Nov 2026. For the planning agent (a Claude chat with Roni). The 
 
 ## Roadmap
 
-1. **Task-1 = 0.1.0:** the project from nothing, plus the sprite-test spike (fps at 50/200/500 squads).
-2. **Task-2:** the engine, as verified code with tests:
-   - race definitions (Outpost, Brood);
-   - economy (sessions, rally, home cards, costs);
-   - waves and the forecast;
-   - `BattleSim` with squads and counters;
-   - balance by simulation, to hit the design's 3/2/0–1 odds.
+1. **Task-1 = 0.1.0:** done 3 Nov (tag v0.1.0). The project from nothing, plus the sprite-test spike; waiting for Roni's fps numbers (debug build).
+2. **Task-2 = 0.2.0** (written 3 Nov): the engine, verified (32 JVM tests, compiled and run by the planning agent).
+   - **Battle model:** squads in a lane, no overkill (one shot drops at most its splash count), counters (Rocketeer ×2 vs armored; Tank ×2 + splash 4 vs swarm), healing.
+   - **Calendar:** warm-up until the first Sunday.
+   - **Tuned:** boss 240 + 265/week (×1.3 in week 12), raids 30%. Measured boss wins: 3/wk ~85%, 2/wk ~55%, 1/wk ~5%, 0 = 0%. One week off after a streak → ~45%, two → ~10%, two weeks after returning ~65%.
+   - **Overkill fix:** before it, Rocketeers beat everything.
 3. **Task-3:** save file, Home (base, supplies, "I went", forecast), training and upgrades.
 4. **Task-4:** the battle player plus Rewatch; scheduled battles; notifications; leave.
 5. **Later:** seasons and perks; real art; more races.
