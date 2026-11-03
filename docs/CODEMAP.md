@@ -1,10 +1,39 @@
-# GymCraft codemap (0.1.0)
+# GymCraft codemap (0.2.0)
 
 One line per source file.
 
-## :engine
+## :engine — model
 - `engine/src/main/kotlin/com/roni/gymcraft/engine/model/Ids.kt` — value-class ids (RaceId, BuildingId, UnitId, TraitId, ArtId) for races-as-data.
+- `engine/src/main/kotlin/com/roni/gymcraft/engine/model/Defs.kt` — `Stats`, `UnitDef`, `BuildingDef`, `HqDef`, `RaceDef`, `GameContent`: races as data.
+- `engine/src/main/kotlin/com/roni/gymcraft/engine/model/GameState.kt` — the whole game state, `BuildingState`, `LeavePeriod`, `BattleOutcome`.
 - `engine/src/test/kotlin/com/roni/gymcraft/engine/model/IdsTest.kt` — `idsCompareByValue`.
+
+## :engine — content (the only place race names appear)
+- `engine/src/main/kotlin/com/roni/gymcraft/engine/content/Traits.kt` — the trait ids and their definitions.
+- `engine/src/main/kotlin/com/roni/gymcraft/engine/content/Outpost.kt` — the Outpost race definition.
+- `engine/src/main/kotlin/com/roni/gymcraft/engine/content/Brood.kt` — the Brood race definition.
+- `engine/src/main/kotlin/com/roni/gymcraft/engine/content/DefaultContent.kt` — the race registry and default `GameContent`.
+
+## :engine — economy
+- `engine/src/main/kotlin/com/roni/gymcraft/engine/economy/Economy.kt` — new game (warm-up until Sunday), session (+100, comeback rally, heals, frees, ends leave), home card, train, upgrade, leave.
+
+## :engine — battle
+- `engine/src/main/kotlin/com/roni/gymcraft/engine/battle/BattleSim.kt` — the deterministic squad battle (lane, counters, no overkill, splash, healing) plus its `BattleRecord` for playback.
+
+## :engine — waves
+- `engine/src/main/kotlin/com/roni/gymcraft/engine/waves/Waves.kt` — the schedule (raids Sun–Fri, boss Sat 20:00, 12 weeks) and the waves.
+- `engine/src/main/kotlin/com/roni/gymcraft/engine/waves/Campaign.kt` — fights every battle that fell due: wounds, occupation.
+- `engine/src/main/kotlin/com/roni/gymcraft/engine/waves/Forecast.kt` — the next boss: wave, main trait, counter, win chance, sessions needed.
+- `engine/src/main/kotlin/com/roni/gymcraft/engine/waves/Planner.kt` — how a sensible player spends (the forecast's "what a session buys", and the balance test's player).
+
+## :engine — tests
+- `engine/src/test/kotlin/com/roni/gymcraft/engine/economy/EconomyTest.kt` — economy rules.
+- `engine/src/test/kotlin/com/roni/gymcraft/engine/battle/BattleSimTest.kt` — battle simulation rules.
+- `engine/src/test/kotlin/com/roni/gymcraft/engine/waves/WavesTest.kt` — schedule and waves.
+- `engine/src/test/kotlin/com/roni/gymcraft/engine/waves/CampaignTest.kt` — due battles, wounds and occupation.
+- `engine/src/test/kotlin/com/roni/gymcraft/engine/waves/ForecastTest.kt` — the forecast.
+- `engine/src/test/kotlin/com/roni/gymcraft/engine/waves/BalanceTest.kt` — the design's odds, plus missed weeks and comebacks.
+- `engine/src/test/kotlin/com/roni/gymcraft/engine/testing/Seasons.kt` — helper that simulates seasons for the balance test.
 
 ## :app — build and shell
 - `app/src/main/AndroidManifest.xml` — the single `.MainActivity`, `App`, dark theme, launcher icon, no permissions.
