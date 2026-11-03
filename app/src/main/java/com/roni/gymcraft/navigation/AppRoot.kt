@@ -25,7 +25,7 @@ fun AppRoot() {
         onBack = { backStack.removeLastOrNull() },
         entryProvider = entryProvider {
             entry<HomeKey> {
-                HomeRoute(onOpenSpriteTest = { backStack.add(SpriteTestKey) })
+                HomeRoute(openSpriteTest = { backStack.add(SpriteTestKey) })
             }
             if (BuildConfig.DEBUG) {
                 entry<SpriteTestKey> {

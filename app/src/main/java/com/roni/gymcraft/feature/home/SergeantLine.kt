@@ -50,10 +50,11 @@ object SergeantLine {
         val kind = if (outcome.kind == BattleKind.BOSS) "Boss" else "Raid"
         val lost = outcome.fallen.values.sum()
         val losses = if (lost > 0) " $lost wounded." else ""
+        val occupied = outcome.occupied
         return when {
             outcome.won -> "$kind $day: held.$losses"
-            outcome.occupied != null -> {
-                val building = content.race(outcome.input.defenderRace)?.building(outcome.occupied)?.name ?: "A building"
+            occupied != null -> {
+                val building = content.race(outcome.input.defenderRace)?.building(occupied)?.name ?: "A building"
                 "$kind $day: lost. The $building fell.$losses One gym session and we take it back."
             }
             else -> "$kind $day: lost.$losses"
