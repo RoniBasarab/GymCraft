@@ -1,7 +1,10 @@
-# Notes (0.2.0)
+# Notes (0.3.0)
 
-One line per choice made while building task 1 and task 2. Task 2 needed no adaptation: the shipped engine compiled and all its tests passed as delivered.
+One line per fix from slice 2 (planner-written files compiled here) and per choice made while building task 3.
 
+- `SergeantLine.result`: `outcome.occupied` is a property from `:engine`, so it can't be smart-cast; bound it to a local `val occupied` (same behavior).
+
+## 0.2.0
 - Git had no identity, so the repo uses `Roni Basarab <RoniBasarab@users.noreply.github.com>` locally.
 - `local.properties` (untracked) points at `C:\Users\ronib\AppData\Local\Android\Sdk`; no SDK env var was set.
 - Navigation 3 `entry<T>` is a member of `entryProvider`'s scope, so no `entry` import.
