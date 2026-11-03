@@ -1,6 +1,6 @@
 # GymCraft: architecture
 
-Decided by Roni with the planning agent, 3 Nov 2026. **Binding.** If something seems to need another way, stop and say so; never improvise. Roni decides, after pros and cons.
+Decided by Roni with the planning agent, 3 Nov 2026 (save and clock details added with Task 3). **Binding.** If something seems to need another way, stop and say so; never improvise. Roni decides, after pros and cons.
 
 ## 1. Principles
 
@@ -64,7 +64,7 @@ data class UnitDef(val id: UnitId, val name: String, val cost: Int, val tier: In
   - a fixed time step (e.g. 10 ticks a second);
   - squads, not single units: a squad's health is its count × the unit's health, and its count drops as health falls;
   - deterministic: the same inputs and seed give the same record. Tests rely on it.
-- **`BattleRecord`**: per tick, each squad's position, count and events (shot, hit, heal, fell). It's small, kept in the save for the last battles, and drives **Rewatch**.
+- **`BattleRecord`**: per tick, each squad's position, count and events (shot, hit, heal, fell). It drives playback. The save keeps each battle's input, not its record: Watch and Rewatch run the simulation again (§7).
 - A battle is resolved **when it's due**, whether or not the app is open. Opening the app (or the notification job) runs whatever battles fell due since the last run, in order.
 - **The player (`feature/battle`):**
   - the ViewModel gives it a finished `BattleRecord`;
@@ -84,15 +84,17 @@ The Route is the only composable that knows the ViewModel; every other composabl
 
 ## 7. Save
 
-- **One file:** `files/save.json` holds `GameSave(version, state, history, battles)`.
-- **Written atomically:** write `save.json.tmp`, then rename; the previous save is kept as `save.json.bak`.
-- **Read:** a newer version number refuses with the error card; an older one is migrated by `save/` migrations, each with a test.
-- **A save that can't be read** falls back to `.bak`. If that fails too, both are set aside (renamed, never deleted), the error card shows, and the app starts fresh.
-- **Backup and restore** from Settings share the same JSON.
+- **One file:** `files/save.json` holds `SaveFile(state, seenBattles)` with a `version`. Written by `SaveCodec` (`:engine/save`) field by field with kotlinx.serialization's JSON elements, not generated serializers, so renaming a Kotlin property never breaks a save. Dates are ISO strings.
+- **Written atomically** (`SaveStore`): write `save.json.tmp`, copy the current save to `save.json.bak`, then move the temp file over the save in one step.
+- **Read:** a newer version number is refused (nothing loaded, nothing written; Home says so); an older one is migrated by `SaveCodec.migrate`, each step with a test.
+- **A save that can't be read** falls back to `.bak`. If that fails too, both are set aside (renamed `save.json.unreadable-<time>`, never deleted) and the app starts fresh.
+- **One owner:** `GameRepository` loads, runs every change through the engine (first fighting what fell due), saves, then publishes. A failed save throws to `Failures`: the error card shows and the screen keeps what's on disk.
+- **Battles are stored as their input** (armies, wave, seed). The simulation is deterministic, so Watch and Rewatch run it again instead of storing every tick.
+- **Backup and restore** from Settings share the same JSON (later).
 
 ## 8. Time and schedules
 
-- An injected clock everywhere. Debug builds get a debug clock you can move, like Blocks' debug time.
+- An injected `GameClock` everywhere. Debug builds get `DebugClock`, moved forward from Home's menu (kept in `files/debug_clock.txt`); release gets `PhoneClock`. Both are `TimeTravel`, decided once in `AppModule`.
 - **Battles fall due by date and time** (Saturday 20:00 boss, other evenings' raids), computed by the engine from the save and now.
 - **Notifications** (the mid-week forecast, results) come from an inexact scheduled job. No exact alarms; nothing time-critical.
 
@@ -100,6 +102,7 @@ The Route is the only composable that knows the ViewModel; every other composabl
 
 - `Failures` (from Blocks 3.5.0): `report(where, error)`, `launch(scope, where, onFailure) { }`, `Flow.reportFailures(...)`, and `FailurePolicy(loud = BuildConfig.DEBUG)`.
 - Release logs and shows an `ErrorCard` ("Something went wrong", **Restart app**, **Send log**) in place of the broken part. Debug crashes.
+- The card's buttons reach `Rescue` (`AppRescue` on Android) through the screen's `Problem(ProblemAction)` action. The log is `files/logs/gymcraft.log`, shared through a FileProvider (`${applicationId}.logs`).
 - **No `!!`.** `codeRules` fails the build on `!!`, `GlobalScope`, `runBlocking`, experimental opt-ins outside `designsystem/`, and race names outside `content/`.
 
 ## 10. Testing

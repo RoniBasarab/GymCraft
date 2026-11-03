@@ -159,3 +159,29 @@ A **drill sergeant**: tough, short, a bit funny, never cruel about missed weeks.
 ## 11. Scope
 
 Roni's own app first, built so it can go on the Play Store later. Solo: no accounts, no network, no ads. Separate from Blocks.
+
+## 12. Home (Task 3, 3 Nov)
+
+From top to bottom, one scrolling screen:
+1. **Supplies** (big) and the **⋮ menu**: Going on leave / I'm back; in debug builds also Sprite test and time travel (+1 hour, +1 day, back to real time).
+2. **Leave banner** while on leave: "On leave. No raids, no boss. Nothing decays." with **I'm back**.
+3. **The base:** the HQ on the left, the production buildings beside it with "Barracks · Lv 2", the army in front. One sprite per unit type, its count above it ("×5") and its wounded below ("+2 hurt"). An occupied building is dimmed with OCCUPIED. Gentle idle animation (flags, smoke, bobbing troops). **Tap a building** to open its sheet.
+4. **The drill sergeant:** his portrait and a bubble with his line for the moment (§9). After a tap he answers in the bubble ("Good work, recruit. +100 supplies.", "3 Riflemen ready."); tapping the bubble brings back his forecast line.
+5. **Forecast card:** "Boss · Sat 20:00", the wave ("30 Biters and 2 Brutes"), "Win chance as things stand: 62%".
+6. **While you were away:** one line per battle fought since the last look ("Raid Tue: held. 2 wounded.", "Boss Sat: lost. The Motor Pool fell. 5 wounded. One gym session and we take it back."), **Got it** clears it. Watch and Rewatch come with the battle player (Task 4).
+7. **Today's home card:** one small exercise a day, the same all day, **Done +10**: 15 squats, 10 push-ups, 30-second plank, 20 lunges, 15 sit-ups, 30 jumping jacks, 10 burpees, 20 glute bridges, 45-second wall sit, 12 chair dips.
+8. **Hold "I WENT TO THE GYM"**: hold about a second until the bar fills (a buzz confirms). Once a day; afterwards "Logged today. Rest up, recruit."
+
+**Building sheet:** the building's name and level; its three units: unlocked ones with a −/+ count (1 to 20), the price and **Train · 150**; locked ones greyed with "Needs level 2". **Upgrade to level 2 · 150** at the bottom (or "Fully upgraded"). An occupied building says so and trains nothing.
+
+**Battles in 0.3.0** are fought when they fall due, each time the app opens or comes back to the front. The results show in "While you were away".
+
+**The sergeant's lines** (built from the forecast):
+- "2 more sessions by Saturday, recruit, or that wall falls. Armored wave: Rocketeers crack it."
+- "One more session tonight, recruit, or that wall falls." (on boss day)
+- "Coming Saturday: 30 Biters and 2 Brutes. We're ready. Keep it that way."
+- "Coming Saturday: 60 Biters and 4 Brutes. Too big for us yet. Every session still counts."
+- "Season starts Sunday, recruit. Every session now is a head start." (warm-up)
+- "On leave. Get well. The base will wait."
+- "You're back. The troops noticed. Rally bonus: +100. +200 supplies."
+
