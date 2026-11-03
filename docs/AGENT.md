@@ -2,16 +2,16 @@
 
 Read this first, every session. The current task is named in the next paragraph.
 
-You're the working agent for GymCraft, an Android game (Kotlin, Compose, Hilt) in this repo. Implement **docs/Task-2.md** (target 0.2.0) exactly, on the branch `task-2/v0.2.0`. Task 2 runs only once v0.1.0 is tagged (check `git tag`); otherwise stop and say so. The owner's tokens are limited: be fast, decisive and brief.
+You're the working agent for GymCraft, an Android game (Kotlin, Compose, Hilt) in this repo. Implement **docs/Task-3.md** (target 0.3.0) exactly, on the branch `task-3/v0.3.0`. Task 3 runs only once v0.2.0 is tagged (check `git tag`); otherwise stop and say so. The owner's tokens are limited: be fast, decisive and brief.
 
 These rules come from weeks of work on Roni's previous app. Every one of them is there because an agent lost hours to the opposite. Follow them literally.
 
 START
 0. Your session doesn't start in the repo. First: cd "C:/GymCraft". Every command below runs from there. If a command ever says "not a git repository", cd there again.
 1. One command: git branch --show-current ; git log --oneline -8 2>$null ; git status --short
-   - Commits named "task-2 slice N" are finished slices; continue with the lowest one missing.
+   - Commits named "task-3 slice N" are finished slices; continue with the lowest one missing.
    - Modified files mean a previous session stopped mid-slice: build that slice; if green or a quick fix, finish and commit it; otherwise git stash push -m "partial" and redo the slice.
-2. Read docs/Task-2.md once, all of it. Read docs/architecture.md once (it's short; it's binding). Open docs/game-design.md only when the task points to a section. Don't read SUMMARY.md.
+2. Read docs/Task-3.md once, all of it. Read docs/architecture.md once (it's short; it's binding). Open docs/game-design.md only when the task points to a section. Don't read SUMMARY.md.
 
 FINDING THINGS: GREP FIRST
 - Search the repo with git grep -n "<name>" (add -- "*.kt" to narrow). It answers in a second.
@@ -52,7 +52,7 @@ EACH SLICE
 2. Make the slice's edits, its code and its named tests. Paste the task's code and adapt names; don't rewrite it.
 3. Build early. Never change more than about 8 files without compiling. An earlier agent changed dozens of files without compiling, and recovering the broken build took a whole extra task.
 4. Build and test the slice; fix until exit=0. Then the full gate once.
-5. git add -A ; git commit -m "task-2 slice N: <title>" 2>&1 | Select-Object -First 1
+5. git add -A ; git commit -m "task-3 slice N: <title>" 2>&1 | Select-Object -First 1
 6. One line: "Slice N done: <hash>". Start the next slice at once.
 
 THINKING: SHORT
@@ -73,7 +73,8 @@ ALWAYS
   - Add only the tests the task names.
   - No Compose UI tests, no Robolectric Compose tests, no screenshot tests, unless the task names one.
   - A failing test means the code is wrong: never change a test's expectations unless the task says so; list every test whose setup you changed.
-- **Code marked verified or shipped by the task** (the task lists it; in Task 2: every file under engine/src) is final: don't edit it.
+- **Code marked verified or shipped by the task** (the task lists it) is final: don't edit it.
+- **Code marked "planner-written, not compiled"** (Task 3: the Compose UI files and the Android wiring): the planner couldn't compile it. Compile it; fix only what the compiler names (an import, a renamed API, a parameter); keep its layout, texts and behavior. Note each fix in docs/NOTES.md in one line.
 - **Real names win:** if a name in the task doesn't exist, use the real one. Don't refactor beyond the slice.
 - **If an edit mangles a file:** git checkout -- <file>, then redo the edit.
 - **Phone:**
