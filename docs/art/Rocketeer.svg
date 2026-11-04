@@ -1,0 +1,34 @@
+<svg viewBox="0 0 120 120" width="168" height="168" role="img" aria-label="Rocketeer sprite">
+<ellipse cx="60" cy="104" rx="28" ry="7" fill="#000" opacity="0.35"></ellipse>
+<g stroke="#15110d" stroke-width="3" stroke-linejoin="round">
+<rect x="47" y="80" width="12" height="20" rx="4" fill="#4b5d69"></rect>
+<rect x="62" y="80" width="12" height="20" rx="4" fill="#4b5d69"></rect>
+<rect x="43" y="95" width="18" height="9" rx="3" fill="#2b2f33"></rect>
+<rect x="60" y="95" width="18" height="9" rx="3" fill="#2b2f33"></rect>
+<g class="bob">
+<rect x="41" y="49" width="40" height="37" rx="12" fill="#5d7280"></rect>
+<rect x="43" y="67" width="36" height="7" rx="2" fill="{{team}}"></rect>
+<circle cx="60" cy="38" r="16" fill="#5d7280"></circle>
+<rect x="61" y="33" width="18" height="10" rx="5" fill="#ffb347"></rect>
+<rect x="70" y="35" width="5" height="3" rx="1.5" fill="#ffffff" stroke="none"></rect>
+</g>
+<g class="recoil">
+<rect x="22" y="38" width="72" height="15" rx="7" fill="#7a7f4a"></rect>
+<rect x="64" y="38" width="8" height="15" fill="{{team}}"></rect>
+<rect x="18" y="40" width="8" height="11" rx="2" fill="#3b3f44"></rect>
+<rect x="90" y="40" width="7" height="11" rx="2" fill="#3b3f44"></rect>
+<circle cx="56" cy="60" r="7" fill="#93abb8"></circle>
+</g>
+<g class="flash" stroke="none">
+<polygon points="97,45 110,37 106,45 114,53 97,48" fill="#ffd65a"></polygon>
+</g>
+<g class="backblast" stroke="none">
+<circle cx="14" cy="45" r="5" fill="#bcae96" opacity="0.7"></circle>
+</g>
+<g class="cheer">
+<path d="M42 56 L30 28" fill="none" stroke-width="12" stroke-linecap="round"></path>
+<path d="M42 56 L30 28" fill="none" stroke="#5d7280" stroke-width="7" stroke-linecap="round"></path>
+<circle cx="29" cy="24" r="6.5" fill="#93abb8"></circle>
+</g>
+</g>
+</svg>

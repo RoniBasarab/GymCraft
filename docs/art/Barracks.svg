@@ -1,0 +1,36 @@
+<svg viewBox="0 0 200 160" width="320" height="256" role="img" aria-label="Barracks building sprite">
+<ellipse cx="100" cy="134" rx="80" ry="13" fill="#000" opacity="0.35"></ellipse>
+<g stroke="#15110d" stroke-width="3" stroke-linejoin="round">
+<path d="M26 128 L26 92 Q26 50 100 50 Q174 50 174 92 L174 128 Z" fill="#8a8f52"></path>
+<path d="M60 56 Q58 90 60 128 M100 50 L100 128 M140 56 Q142 90 140 128" fill="none" stroke="#5a5e35" stroke-width="2.5"></path>
+<path d="M26 104 L174 104 L174 111 L26 111 Z" fill="{{team}}"></path>
+<path d="M80 128 L80 96 Q80 82 100 82 Q120 82 120 96 L120 128 Z" fill="#1c1915"></path>
+<g class="peek">
+<rect x="89" y="110" width="22" height="16" rx="6" fill="#6f8796"></rect>
+<rect x="90" y="116" width="20" height="4" rx="1.5" fill="{{team}}"></rect>
+<circle cx="100" cy="102" r="9" fill="#6f8796"></circle>
+<rect x="100" y="98" width="10" height="6" rx="3" fill="#7fd4ff"></rect>
+</g>
+<g class="door">
+<path d="M80 128 L80 96 Q80 82 100 82 Q120 82 120 96 L120 128 Z" fill="#6b5a45"></path>
+<path d="M93 85 L93 127 M107 85 L107 127" fill="none" stroke="#4a3d2f" stroke-width="2"></path>
+<circle cx="114" cy="110" r="2.2" fill="#d9c27a" stroke-width="1.5"></circle>
+</g>
+<g>
+<path d="M126 128 L126 113 L146 113 L146 128" fill="none" stroke-width="2.5"></path>
+<rect x="128" y="116.5" width="16" height="2.4" rx="1" fill="#8d8f90" stroke="none"></rect>
+<circle cx="129.5" cy="117.7" r="3.4" fill="#3b3f44" stroke-width="2"></circle>
+<circle cx="142.5" cy="117.7" r="3.4" fill="#3b3f44" stroke-width="2"></circle>
+<rect x="128" y="123" width="16" height="2.4" rx="1" fill="#8d8f90" stroke="none"></rect>
+<circle cx="129.5" cy="124.2" r="3.4" fill="#3b3f44" stroke-width="2"></circle>
+<circle cx="142.5" cy="124.2" r="3.4" fill="#3b3f44" stroke-width="2"></circle>
+</g>
+<rect x="93" y="72" width="14" height="5" rx="2.5" fill="#ffd65a" stroke-width="2" class="glow"></rect>
+<rect x="134" y="80" width="22" height="14" rx="3" fill="#7fd4ff"></rect>
+<rect x="44" y="80" width="22" height="14" rx="3" fill="#7fd4ff"></rect>
+<ellipse cx="34" cy="130" rx="11" ry="6" fill="#a2916f"></ellipse>
+<ellipse cx="166" cy="130" rx="11" ry="6" fill="#b09f7c"></ellipse>
+<rect x="150" y="40" width="10" height="16" rx="2" fill="#5a5e35"></rect>
+<circle cx="155" cy="34" r="6" fill="#bcae96" opacity="0.6" stroke="none" class="smoke"></circle>
+</g>
+</svg>

@@ -45,6 +45,8 @@ data class HomeState(
     val sheet: BuildingSheet? = null,
     /** The sergeant's answer to the last tap; shown in his bubble instead of [GameUi.sergeant] until tapped away. */
     val reply: String? = null,
+    /** Successful "I went"s since the screen opened: each new one makes the troops cheer once (an animation in the base). */
+    val cheers: Int = 0,
     /** The ⋮ menu (leave; debug: sprite test, time travel) is open. */
     val menuOpen: Boolean = false,
     /** Debug builds: the sprite test and time travel in the menu, and the game's time on screen. */
@@ -119,10 +121,10 @@ class HomeViewModel @Inject constructor(
         if (_state.value.menuOpen && action !is HomeAction.ShowMenu) _state.update { it.copy(menuOpen = false) }   // a menu item closes it
         when (action) {
             HomeAction.Went -> run("home.session") {
-                reply(when (val c = repo.session()) {
-                    is Change.Ok -> SergeantLine.session(c)
-                    is Change.Refused -> HomeUi.refused(c.why)
-                })
+                when (val c = repo.session()) {
+                    is Change.Ok -> _state.update { it.copy(reply = SergeantLine.session(c), cheers = it.cheers + 1) }
+                    is Change.Refused -> reply(HomeUi.refused(c.why))
+                }
             }
             HomeAction.CardDone -> run("home.card") {
                 reply(when (val c = repo.homeCard()) {

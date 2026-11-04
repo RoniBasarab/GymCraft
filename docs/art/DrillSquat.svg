@@ -1,0 +1,27 @@
+<svg viewBox="0 0 120 120" width="168" height="168" role="img" aria-label="Recruit doing squats">
+<ellipse cx="60" cy="106" rx="30" ry="6" fill="#000" opacity="0.35"></ellipse>
+<g stroke="#15110d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<g class="poseA">
+<path d="M53 76 L52 100 M67 76 L68 100" fill="none" stroke-width="11"></path>
+<path d="M53 76 L52 100 M67 76 L68 100" fill="none" stroke="#4b5d69" stroke-width="7"></path>
+<rect x="44" y="44" width="32" height="34" rx="10" fill="#6f8796"></rect>
+<rect x="45" y="62" width="30" height="6" rx="2" fill="{{team}}"></rect>
+<path d="M46 52 L26 56 M74 52 L94 56" fill="none" stroke-width="10"></path>
+<path d="M46 52 L26 56 M74 52 L94 56" fill="none" stroke="#6f8796" stroke-width="6"></path>
+<circle cx="60" cy="32" r="12" fill="#6f8796"></circle>
+<rect x="53" y="28" width="14" height="7" rx="3.5" fill="#7fd4ff"></rect>
+</g>
+<g class="poseB">
+<path d="M52 86 L40 94 L48 102 M68 86 L80 94 L72 102" fill="none" stroke-width="11"></path>
+<path d="M52 86 L40 94 L48 102 M68 86 L80 94 L72 102" fill="none" stroke="#4b5d69" stroke-width="7"></path>
+<rect x="44" y="56" width="32" height="34" rx="10" fill="#6f8796"></rect>
+<rect x="45" y="74" width="30" height="6" rx="2" fill="{{team}}"></rect>
+<path d="M46 64 L24 66 M74 64 L96 66" fill="none" stroke-width="10"></path>
+<path d="M46 64 L24 66 M74 64 L96 66" fill="none" stroke="#6f8796" stroke-width="6"></path>
+<circle cx="60" cy="44" r="12" fill="#6f8796"></circle>
+<rect x="53" y="40" width="14" height="7" rx="3.5" fill="#7fd4ff"></rect>
+</g>
+<rect x="42" y="100" width="16" height="7" rx="3" fill="#2b2f33"></rect>
+<rect x="62" y="100" width="16" height="7" rx="3" fill="#2b2f33"></rect>
+</g>
+</svg>

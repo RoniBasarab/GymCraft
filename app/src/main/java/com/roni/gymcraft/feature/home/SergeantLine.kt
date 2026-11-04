@@ -41,8 +41,8 @@ object SergeantLine {
 
     /** What he says right after "I went" (and the hold-to-confirm finished). */
     fun session(change: Change.Ok): String =
-        if (change.rally) "You're back. The troops noticed. Rally bonus: +${change.gained - 100}. +${change.gained} supplies."
-        else "Good work, recruit. +${change.gained} supplies."
+        if (change.rally) "You're back. The troops noticed. Rally bonus: +${change.gained - 100}. +${change.gained} protein."
+        else "Good work, recruit. +${change.gained} protein."
 
     /** One row of the "While you were away" card. */
     fun result(outcome: BattleOutcome, content: GameContent): String {
@@ -50,11 +50,10 @@ object SergeantLine {
         val kind = if (outcome.kind == BattleKind.BOSS) "Boss" else "Raid"
         val lost = outcome.fallen.values.sum()
         val losses = if (lost > 0) " $lost wounded." else ""
-        val occupied = outcome.occupied
         return when {
             outcome.won -> "$kind $day: held.$losses"
-            occupied != null -> {
-                val building = content.race(outcome.input.defenderRace)?.building(occupied)?.name ?: "A building"
+            outcome.occupied != null -> {
+                val building = content.race(outcome.input.defenderRace)?.building(outcome.occupied)?.name ?: "A building"
                 "$kind $day: lost. The $building fell.$losses One gym session and we take it back."
             }
             else -> "$kind $day: lost.$losses"

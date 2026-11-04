@@ -18,7 +18,8 @@ import kotlin.math.roundToInt
 @Immutable
 data class GameUi(
     val race: RaceId,
-    val supplies: Int,
+    /** The currency, shown as protein (the engine calls it supplies). */
+    val protein: Int,
     /** The drill sergeant's line ([SergeantLine.home]). */
     val sergeant: String,
     val forecast: ForecastUi?,
@@ -38,8 +39,9 @@ data class GameUi(
 @Immutable
 data class ForecastUi(val title: String, val wave: String, val chance: Int)
 
+/** Today's home card: its text, whether it's done, and how the drill recruit shows it ([HomeCard]). */
 @Immutable
-data class HomeCardUi(val text: String, val done: Boolean)
+data class HomeCardUi(val text: String, val done: Boolean, val move: String, val hold: Boolean)
 
 @Immutable
 data class BuildingUi(val id: BuildingId, val name: String, val art: ArtId, val level: Int, val maxLevel: Int, val occupied: Boolean)
@@ -101,12 +103,12 @@ object HomeUi {
         }
         return GameUi(
             race = s.race,
-            supplies = s.supplies,
+            protein = s.supplies,
             sergeant = SergeantLine.home(s, snap.forecast, content, snap.at),
             forecast = forecast,
             onLeave = onLeave,
             wentToday = today in s.sessions,
-            card = HomeCardUi(HomeCards.forDay(today, s.seasonSeed), today in s.homeCards),
+            card = HomeCards.forDay(today, s.seasonSeed).let { HomeCardUi(it.text, today in s.homeCards, it.move, it.hold) },
             away = snap.unseen.map { SergeantLine.result(it, content) },
             hq = race?.hq?.art ?: ArtId("missing"),
             buildings = race?.buildings.orEmpty().map { b ->
@@ -152,17 +154,17 @@ object HomeUi {
     /** "3 Riflemen ready." */
     fun trained(name: String, count: Int): String = if (count == 1) "1 $name ready." else "$count ${plural(name)} ready."
 
-    /** "Barracks: level 2. Medics unlocked." */
+    /** "Barracks 2. Medics unlocked." */
     fun upgraded(sheet: BuildingSheet, content: GameContent): String {
         val next = sheet.level + 1
         val unlocked = sheet.units.firstOrNull { it.tier == next }?.name
-        return "${sheet.name}: level $next." + (unlocked?.let { " ${plural(it)} unlocked." } ?: "")
+        return "${sheet.name} $next." + (unlocked?.let { " ${plural(it)} unlocked." } ?: "")
     }
 
     fun refused(why: Refusal): String = when (why) {
         Refusal.ALREADY_TODAY -> "That's done for today, recruit."
         Refusal.FUTURE -> "Can't log tomorrow today, recruit."
-        Refusal.NOT_ENOUGH -> "Not enough supplies. A gym session brings 100."
+        Refusal.NOT_ENOUGH -> "Not enough protein. A gym session brings 100."
         Refusal.LOCKED -> "Upgrade the building first."
         Refusal.OCCUPIED -> "Occupied. One gym session and we take it back."
         Refusal.MAX_LEVEL -> "Fully upgraded, recruit."
@@ -171,7 +173,7 @@ object HomeUi {
         Refusal.UNKNOWN -> "Can't do that right now."
     }
 
-    const val CARD_DONE = "+10 supplies. Every rep counts."
+    const val CARD_DONE = "+10 protein. Every rep counts."
     const val BACK_FROM_LEAVE = "Welcome back, recruit. The gym's waiting."
     const val STARTED_FRESH = "Couldn't read the old save. I kept it aside and started a new base."
 

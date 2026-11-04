@@ -10,8 +10,8 @@ A small base-builder in a chunky cartoon style inspired by StarCraft: Brood War.
 
 ## 2. The loop
 
-1. **Go to the gym → tap "I went"** (manual; no location, no permission). +100 supplies.
-2. **Spend supplies:** train units, upgrade production buildings.
+1. **Go to the gym → hold "I went"** (manual; no location, no permission). +100 protein.
+2. **Spend protein:** train units, upgrade production buildings.
 3. **Attacks come on a schedule.** The battle runs by itself; you watch it as a short animation (30–60 s) and can **Rewatch** it.
 4. **The forecast** always shows what's coming and what it takes, in the drill sergeant's voice: *"Saturday: 30 Biters and 2 Brutes. Brutes are armored, recruit. One more gym session buys the Rocketeers that crack them."*
 
@@ -19,9 +19,9 @@ A normal day in the app takes **1–2 minutes**.
 
 ## 3. Economy
 
-One resource: **supplies**.
+One resource: **protein** (Roni, 3 Nov: a protein tub icon; the code and the save still call it `supplies`).
 
-| Source | Supplies | Rule |
+| Source | Protein | Rule |
 |---|---|---|
 | Gym session ("I went") | **100** | Flat: showing up is what counts. At most one a day |
 | Comeback rally | **+100** | On the first session after 7+ days without one. Days on leave don't count as days away |
@@ -96,7 +96,7 @@ The **weekly target is 3 sessions**.
 
 **No overkill:** one shot drops at most one enemy unit, unless the weapon has splash (the Tank: up to 4). So a Rocketeer's rocket kills one Biter, not four: Rocketeers crack armor and are wasted on swarms, while Tanks shred swarms.
 
-Value per supply is balanced on health × damage per second ÷ cost². In a squad fight, strength grows with the square of numbers, so cheap units count double.
+Value per protein is balanced on health × damage per second ÷ cost². In a squad fight, strength grows with the square of numbers, so cheap units count double.
 
 ### The Brood, as the season-1 enemy
 
@@ -143,6 +143,7 @@ The Brood's other three units (Burster, an ambusher, Behemoth) and the Radiant c
 A **drill sergeant**: tough, short, a bit funny, never cruel about missed weeks. Examples:
 - *"Two sessions by Saturday, recruit, or that wall falls."*
 - *"You're back. The troops noticed. Rally bonus: +100."*
+- After "I went": *"Good work, recruit. +100 protein."*
 - *"On leave. Get well. The base will wait."*
 - *"Lost the Motor Pool to the swarm. One gym session and we take it back."*
 
@@ -153,28 +154,35 @@ A **drill sergeant**: tough, short, a bit funny, never cruel about missed weeks.
   - 3/4 view;
   - a small palette per race;
   - one **team color** stripe on every Outpost unit and building.
-- **Cutout animation:** each unit is a few separate pieces (body, weapon, muzzle flash) moved in code: bob, recoil, flash, wheels, treads, steps. No frame-by-frame art.
-- **Art pipeline:** AI-generated sprites, cleaned up and cut into those pieces. The first designs are on the "GymCraft Sprites" canvas.
+- **Cutout animation:** each unit is a few separate pieces (body, weapon, muzzle flash) moved in code: bob, recoil, flash, wheels, treads, steps. The only frame swaps are two-pose moves (the yard's pull-ups and punches, the drill recruit).
+- **The base is alive (0.3.1):** the HQ's radar turns, its windows flicker, its flag (with a dumbbell) gusts now and then; the Barracks door opens for a moment and a recruit peeks out; the Motor Pool's garage door rolls up to show a vehicle with its headlights on; smoke, a swinging crane hook.
+- **Gym everywhere (0.3.1):** a training yard next to the HQ (a recruit doing pull-ups, another on the punching bag), a dumbbell rack by the Barracks, the sergeant's whistle and stopwatch, the protein tub.
+- **Art pipeline:** the "GymCraft Sprites" canvas holds the designs; their SVGs are in `docs/art/` (each moving piece is a class: `bob`, `door`, `poseA`...). The planning agent turns them into Kotlin (`designsystem/sprites/content/*Art.kt`) and checks the result by rendering it.
 
 ## 11. Scope
 
 Roni's own app first, built so it can go on the Play Store later. Solo: no accounts, no network, no ads. Separate from Blocks.
 
-## 12. Home (Task 3, 3 Nov)
+## 12. Home (Task 3, reworked in 0.3.1 with Roni's feedback, 3 Nov)
 
-From top to bottom, one scrolling screen:
-1. **Supplies** (big) and the **⋮ menu**: Going on leave / I'm back; in debug builds also Sprite test and time travel (+1 hour, +1 day, back to real time).
-2. **Leave banner** while on leave: "On leave. No raids, no boss. Nothing decays." with **I'm back**.
-3. **The base:** the HQ on the left, the production buildings beside it with "Barracks · Lv 2", the army in front. One sprite per unit type, its count above it ("×5") and its wounded below ("+2 hurt"). An occupied building is dimmed with OCCUPIED. Gentle idle animation (flags, smoke, bobbing troops). **Tap a building** to open its sheet.
-4. **The drill sergeant:** his portrait and a bubble with his line for the moment (§9). After a tap he answers in the bubble ("Good work, recruit. +100 supplies.", "3 Riflemen ready."); tapping the bubble brings back his forecast line.
-5. **Forecast card:** "Boss · Sat 20:00", the wave ("30 Biters and 2 Brutes"), "Win chance as things stand: 62%".
-6. **While you were away:** one line per battle fought since the last look ("Raid Tue: held. 2 wounded.", "Boss Sat: lost. The Motor Pool fell. 5 wounded. One gym session and we take it back."), **Got it** clears it. Watch and Rewatch come with the battle player (Task 4).
-7. **Today's home card:** one small exercise a day, the same all day, **Done +10**: 15 squats, 10 push-ups, 30-second plank, 20 lunges, 15 sit-ups, 30 jumping jacks, 10 burpees, 20 glute bridges, 45-second wall sit, 12 chair dips.
-8. **Hold "I WENT TO THE GYM"**: hold about a second until the bar fills (a buzz confirms). Once a day; afterwards "Logged today. Rest up, recruit."
+**The base is the screen.** From top to bottom:
+1. **A sky strip:** the protein tub and the amount ("240 protein"), the debug time (debug builds), the **⋮ menu** (Going on leave / I'm back; debug: Sprite test, time +1 hour, +1 day, back to real time). The error card and the leave banner ("On leave. No raids, no boss." with **I'm back**) appear here when they apply.
+2. **The scene**, taking all the room left:
+   - back row: the production buildings, labelled **"Barracks 1"**, **"Motor Pool 2"** (name and level). Tap one for its sheet. An occupied one is dimmed with OCCUPIED;
+   - front: the HQ and the training yard;
+   - bottom: the army, one sprite per unit type, its count above ("×5") and its wounded below ("+2 hurt").
+3. **A ground strip:**
+   - the sergeant's portrait and bubble (§9). After a tap he answers in the bubble; tapping it brings back his forecast line;
+   - "While you were away" when there are new battle results ("Raid Tue: held. 2 wounded."), **Got it** clears it;
+   - **one line for the boss:** "BOSS Sat 20:00 · 30 Biters and 2 Brutes 62%";
+   - **one line for the home card:** the drill recruit doing the move, "15 squats", and **+10** with the tub;
+   - **the lift:** hold "HOLD: I WENT TO THE GYM" about a second; a barbell rises, locks out with a buzz, +100 protein, and the troops cheer (infantry raise a fist, every unit hops). Once a day, then "Logged today. Rest up, recruit."
 
-**Building sheet:** the building's name and level; its three units: unlocked ones with a −/+ count (1 to 20), the price and **Train · 150**; locked ones greyed with "Needs level 2". **Upgrade to level 2 · 150** at the bottom (or "Fully upgraded"). An occupied building says so and trains nothing.
+**Home cards** and the drill recruit's move: 15 squats (squat), 10 push-ups (push-up), 30-second plank (push-up, held), 20 lunges (squat), 15 sit-ups (sit-up), 30 jumping jacks (jacks), 10 burpees (jacks), 20 glute bridges (sit-up), 45-second wall sit (squat, held), 12 chair dips (push-up). A held move shows its second pose with a little shake.
 
-**Battles in 0.3.0** are fought when they fall due, each time the app opens or comes back to the front. The results show in "While you were away".
+**Building sheet:** "Barracks 1", "Level 1 of 3"; each unit with its price and the tub ("50 each · 2 ready"), −/+ (1 to 20) and **Train 150**; locked units greyed ("Needs level 2"); **Upgrade to Barracks 2 · 150** (or "Fully upgraded"). An occupied building says so and trains nothing.
+
+**Battles in 0.3.x** are fought when they fall due, each time the app opens or comes back to the front; the results show in "While you were away". **Task 4** gives them their own screen (the "An attack" board on the canvas): one lane, the HQ at the left edge, your squads, the Brood from the right, shots from each muzzle, both armies' strength on top, Pause, ×1, ×2, Skip.
 
 **The sergeant's lines** (built from the forecast):
 - "2 more sessions by Saturday, recruit, or that wall falls. Armored wave: Rocketeers crack it."
@@ -183,5 +191,18 @@ From top to bottom, one scrolling screen:
 - "Coming Saturday: 60 Biters and 4 Brutes. Too big for us yet. Every session still counts."
 - "Season starts Sunday, recruit. Every session now is a head start." (warm-up)
 - "On leave. Get well. The base will wait."
-- "You're back. The troops noticed. Rally bonus: +100. +200 supplies."
+- "Good work, recruit. +100 protein." / "You're back. The troops noticed. Rally bonus: +100. +200 protein."
+- "3 Riflemen ready." / "Barracks 2. Medics unlocked." / "Not enough protein. A gym session brings 100."
 
+
+## 13. Upgrade cards (later; decided by Roni, 4 Nov)
+
+- **A roguelike draft once a week:** after every boss battle, won or lost, three random cards are dealt and you pick one. Protein still buys units and building levels; the cards are the weekly extra. No boss (on leave), no draft.
+- **No stat sponges.** No "+8% Rifleman health": every card changes what happens in a battle or how the week plays. Examples:
+  - battlefield: rockets that go through to the unit behind; Buggies that pull back after each shot; a Tank that doubles its range while standing still; once per battle a unit that would fall stays up; Medics heal everyone once when the army drops below a third;
+  - base: a minefield that drops the first squad to reach the middle; an HQ mortar; sandbags for the first five seconds;
+  - gym: a free Rifleman for a session after a rest day; the whistle (a charge at double speed) for the first battle after a comeback; once a season a lost boss occupies nothing; a smaller boss in a week you beat your best session count;
+  - legendary: a Brood unit fights for you in every boss battle; all three infantry types share one healing pool.
+- **Scale:** about 80 to 100 mechanics with ranks I to III (drawing one you have offers the next rank) and per-race versions: 400+ offers. Rarities: common, rare, legendary.
+- **Built to grow:** cards are data hung on a few engine hooks (battle start, shot, unit falls, session logged), per race, each with a test. The balance test plays seasons with random drafts, and waves grow a little with the cards you hold.
+- **Season end:** the season's cards go with the buildings and units; the permanent perk (§8) stays.

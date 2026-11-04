@@ -9,7 +9,7 @@ import com.roni.gymcraft.designsystem.sprites.TEAM_FILL
 import com.roni.gymcraft.designsystem.sprites.sprite
 import com.roni.gymcraft.engine.model.ArtId
 
-/** The Outpost's sprites: units, buildings, and the drill sergeant. Generated from the "GymCraft Sprites" canvas by the planning agent; do not hand-edit. */
+/** The Outpost's sprites: units, buildings, the training yard, the drill recruit and the drill sergeant. Generated from the "GymCraft Sprites" canvas by the planning agent; do not hand-edit. */
 object OutpostArt {
 
     val Rifleman: SpriteArt by lazy {
@@ -70,7 +70,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("bob", team = false, bounds = floatArrayOf(39.5f, 47.5f, 82.5f, 87.5f)) {
+            layer("bob", team = false, bounds = floatArrayOf(31.5f, 16.5f, 83.5f, 87.5f)) {
                 shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(53f, 49f)
                     horizontalLineTo(69f)
@@ -84,7 +84,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("bob", team = true, bounds = floatArrayOf(43f, 67f, 79f, 74f)) {
+            layer("bob", team = true, bounds = floatArrayOf(31.5f, 16.5f, 83.5f, 87.5f)) {
                 shape(fill = TEAM_FILL, stroke = null, width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(45f, 67f)
                     horizontalLineTo(77f)
@@ -98,7 +98,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("bob", team = false, bounds = floatArrayOf(31.5f, 16.5f, 83.5f, 75.5f)) {
+            layer("bob", team = false, bounds = floatArrayOf(31.5f, 16.5f, 83.5f, 87.5f)) {
                 shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(45f, 67f)
                     horizontalLineTo(77f)
@@ -202,6 +202,22 @@ object OutpostArt {
                     close()
                 }
             }
+            layer("cheer", team = false, bounds = floatArrayOf(21f, 16f, 48f, 62f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 12f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(42f, 56f)
+                    lineTo(30f, 28f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF6F8796)), width = 7f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(42f, 56f)
+                    lineTo(30f, 28f)
+                }
+                shape(fill = SolidColor(Color(0xFF93ABB8)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(22.5f, 24f)
+                    arcTo(6.5f, 6.5f, 0f, true, false, 35.5f, 24f)
+                    arcTo(6.5f, 6.5f, 0f, true, false, 22.5f, 24f)
+                    close()
+                }
+            }
         }
     }
 
@@ -263,7 +279,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("bob", team = false, bounds = floatArrayOf(28.5f, 47.5f, 82.5f, 87.5f)) {
+            layer("bob", team = false, bounds = floatArrayOf(28.5f, 16.5f, 83.5f, 87.5f)) {
                 shape(fill = SolidColor(Color(0xFFA79F8C)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(35f, 52f)
                     horizontalLineTo(41f)
@@ -289,7 +305,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("bob", team = true, bounds = floatArrayOf(43f, 67f, 79f, 74f)) {
+            layer("bob", team = true, bounds = floatArrayOf(28.5f, 16.5f, 83.5f, 87.5f)) {
                 shape(fill = TEAM_FILL, stroke = null, width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(45f, 67f)
                     horizontalLineTo(77f)
@@ -303,7 +319,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("bob", team = false, bounds = floatArrayOf(31.5f, 16.5f, 83.5f, 75.5f)) {
+            layer("bob", team = false, bounds = floatArrayOf(28.5f, 16.5f, 83.5f, 87.5f)) {
                 shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(45f, 67f)
                     horizontalLineTo(77f)
@@ -394,6 +410,22 @@ object OutpostArt {
                     close()
                 }
             }
+            layer("cheer", team = false, bounds = floatArrayOf(21f, 16f, 48f, 62f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 12f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(42f, 56f)
+                    lineTo(30f, 28f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFFD8CFBB)), width = 7f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(42f, 56f)
+                    lineTo(30f, 28f)
+                }
+                shape(fill = SolidColor(Color(0xFFEFE8D8)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(22.5f, 24f)
+                    arcTo(6.5f, 6.5f, 0f, true, false, 35.5f, 24f)
+                    arcTo(6.5f, 6.5f, 0f, true, false, 22.5f, 24f)
+                    close()
+                }
+            }
         }
     }
 
@@ -455,7 +487,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("bob", team = false, bounds = floatArrayOf(39.5f, 47.5f, 82.5f, 87.5f)) {
+            layer("bob", team = false, bounds = floatArrayOf(39.5f, 20.5f, 82.5f, 87.5f)) {
                 shape(fill = SolidColor(Color(0xFF5D7280)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(53f, 49f)
                     horizontalLineTo(69f)
@@ -469,7 +501,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("bob", team = true, bounds = floatArrayOf(43f, 67f, 79f, 74f)) {
+            layer("bob", team = true, bounds = floatArrayOf(39.5f, 20.5f, 82.5f, 87.5f)) {
                 shape(fill = TEAM_FILL, stroke = null, width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(45f, 67f)
                     horizontalLineTo(77f)
@@ -483,7 +515,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("bob", team = false, bounds = floatArrayOf(41.5f, 20.5f, 80.5f, 75.5f)) {
+            layer("bob", team = false, bounds = floatArrayOf(39.5f, 20.5f, 82.5f, 87.5f)) {
                 shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(45f, 67f)
                     horizontalLineTo(77f)
@@ -527,7 +559,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("recoil", team = false, bounds = floatArrayOf(20.5f, 36.5f, 95.5f, 54.5f)) {
+            layer("recoil", team = false, bounds = floatArrayOf(16.5f, 36.5f, 98.5f, 68.5f)) {
                 shape(fill = SolidColor(Color(0xFF7A7F4A)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(29f, 38f)
                     horizontalLineTo(87f)
@@ -541,7 +573,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("recoil", team = true, bounds = floatArrayOf(64f, 38f, 72f, 53f)) {
+            layer("recoil", team = true, bounds = floatArrayOf(16.5f, 36.5f, 98.5f, 68.5f)) {
                 shape(fill = TEAM_FILL, stroke = null, width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(64f, 38f)
                     horizontalLineTo(72f)
@@ -607,6 +639,22 @@ object OutpostArt {
                     close()
                 }
             }
+            layer("cheer", team = false, bounds = floatArrayOf(21f, 16f, 48f, 62f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 12f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(42f, 56f)
+                    lineTo(30f, 28f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF5D7280)), width = 7f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(42f, 56f)
+                    lineTo(30f, 28f)
+                }
+                shape(fill = SolidColor(Color(0xFF93ABB8)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(22.5f, 24f)
+                    arcTo(6.5f, 6.5f, 0f, true, false, 35.5f, 24f)
+                    arcTo(6.5f, 6.5f, 0f, true, false, 22.5f, 24f)
+                    close()
+                }
+            }
         }
     }
 
@@ -637,7 +685,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("bounce", team = true, bounds = floatArrayOf(27f, 60f, 102f, 69f)) {
+            layer("bounce", team = true, bounds = floatArrayOf(14.5f, 30.5f, 109.5f, 81.5f)) {
                 shape(fill = TEAM_FILL, stroke = null, width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(28f, 62f)
                     lineTo(100f, 60f)
@@ -646,7 +694,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("bounce", team = false, bounds = floatArrayOf(25.5f, 31.5f, 103.5f, 70.5f)) {
+            layer("bounce", team = false, bounds = floatArrayOf(14.5f, 30.5f, 109.5f, 81.5f)) {
                 shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(28f, 62f)
                     lineTo(100f, 60f)
@@ -920,7 +968,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("bob", team = false, bounds = floatArrayOf(29.5f, 31.5f, 88.5f, 72.5f)) {
+            layer("bob", team = false, bounds = floatArrayOf(29.5f, 24.5f, 88.5f, 72.5f)) {
                 shape(fill = SolidColor(Color(0xFF7A7F4A)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(31f, 52f)
                     arcTo(28f, 19f, 0f, true, false, 87f, 52f)
@@ -928,7 +976,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("bob", team = true, bounds = floatArrayOf(34f, 58f, 84f, 66.5f)) {
+            layer("bob", team = true, bounds = floatArrayOf(29.5f, 24.5f, 88.5f, 72.5f)) {
                 shape(fill = TEAM_FILL, stroke = null, width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(34f, 58f)
                     quadTo(59f, 66f, 84f, 58f)
@@ -937,7 +985,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("bob", team = false, bounds = floatArrayOf(32.5f, 24.5f, 85.5f, 68f)) {
+            layer("bob", team = false, bounds = floatArrayOf(29.5f, 24.5f, 88.5f, 72.5f)) {
                 shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(34f, 58f)
                     quadTo(59f, 66f, 84f, 58f)
@@ -1092,6 +1140,32 @@ object OutpostArt {
                     close()
                 }
             }
+            layer("flicker", team = false, bounds = floatArrayOf(50.5f, 106.5f, 149.5f, 120.5f)) {
+                shape(fill = SolidColor(Color(0xFFFFD65A)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(55f, 108f)
+                    horizontalLineTo(69f)
+                    arcTo(3f, 3f, 0f, false, true, 72f, 111f)
+                    verticalLineTo(116f)
+                    arcTo(3f, 3f, 0f, false, true, 69f, 119f)
+                    horizontalLineTo(55f)
+                    arcTo(3f, 3f, 0f, false, true, 52f, 116f)
+                    verticalLineTo(111f)
+                    arcTo(3f, 3f, 0f, false, true, 55f, 108f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFFFFD65A)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(131f, 108f)
+                    horizontalLineTo(145f)
+                    arcTo(3f, 3f, 0f, false, true, 148f, 111f)
+                    verticalLineTo(116f)
+                    arcTo(3f, 3f, 0f, false, true, 145f, 119f)
+                    horizontalLineTo(131f)
+                    arcTo(3f, 3f, 0f, false, true, 128f, 116f)
+                    verticalLineTo(111f)
+                    arcTo(3f, 3f, 0f, false, true, 131f, 108f)
+                    close()
+                }
+            }
             layer("base", team = true, bounds = floatArrayOf(92f, 117f, 108f, 121f)) {
                 shape(fill = TEAM_FILL, stroke = null, width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(94f, 117f)
@@ -1103,6 +1177,29 @@ object OutpostArt {
                     arcTo(2f, 2f, 0f, false, true, 92f, 119f)
                     verticalLineTo(119f)
                     arcTo(2f, 2f, 0f, false, true, 94f, 117f)
+                    close()
+                }
+            }
+            layer("base", team = false, bounds = floatArrayOf(80.5f, 44f, 83.5f, 64f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(82f, 64f)
+                    lineTo(82f, 44f)
+                }
+            }
+            layer("radar", team = false, bounds = floatArrayOf(66.5f, 28.75f, 97.5f, 47.5f)) {
+                shape(fill = SolidColor(Color(0xFFC9CED2)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(68f, 38f)
+                    quadTo(82f, 54f, 96f, 38f)
+                    close()
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 2.5f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(82f, 44f)
+                    lineTo(82f, 33f)
+                }
+                shape(fill = SolidColor(Color(0xFFFF5C5C)), stroke = SolidColor(Color(0xFF15110D)), width = 1.5f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(79.5f, 32f)
+                    arcTo(2.5f, 2.5f, 0f, true, false, 84.5f, 32f)
+                    arcTo(2.5f, 2.5f, 0f, true, false, 79.5f, 32f)
                     close()
                 }
             }
@@ -1126,7 +1223,7 @@ object OutpostArt {
                     lineTo(56f, 46f)
                 }
             }
-            layer("wave", team = true, bounds = floatArrayOf(56f, 46f, 84f, 62f)) {
+            layer("wave", team = true, bounds = floatArrayOf(54.5f, 44.5f, 85.5f, 63.5f)) {
                 shape(fill = TEAM_FILL, stroke = null, width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(56f, 46f)
                     lineTo(84f, 50f)
@@ -1139,6 +1236,42 @@ object OutpostArt {
                     moveTo(56f, 46f)
                     lineTo(84f, 50f)
                     lineTo(56f, 62f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF1C1915)), stroke = null, width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(61f, 51f)
+                    horizontalLineTo(70f)
+                    arcTo(1f, 1f, 0f, false, true, 71f, 52f)
+                    verticalLineTo(52.4f)
+                    arcTo(1f, 1f, 0f, false, true, 70f, 53.4f)
+                    horizontalLineTo(61f)
+                    arcTo(1f, 1f, 0f, false, true, 60f, 52.4f)
+                    verticalLineTo(52f)
+                    arcTo(1f, 1f, 0f, false, true, 61f, 51f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF1C1915)), stroke = null, width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(59.5f, 48.5f)
+                    horizontalLineTo(60.5f)
+                    arcTo(1f, 1f, 0f, false, true, 61.5f, 49.5f)
+                    verticalLineTo(54.9f)
+                    arcTo(1f, 1f, 0f, false, true, 60.5f, 55.9f)
+                    horizontalLineTo(59.5f)
+                    arcTo(1f, 1f, 0f, false, true, 58.5f, 54.9f)
+                    verticalLineTo(49.5f)
+                    arcTo(1f, 1f, 0f, false, true, 59.5f, 48.5f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF1C1915)), stroke = null, width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(70.5f, 48.5f)
+                    horizontalLineTo(71.5f)
+                    arcTo(1f, 1f, 0f, false, true, 72.5f, 49.5f)
+                    verticalLineTo(54.9f)
+                    arcTo(1f, 1f, 0f, false, true, 71.5f, 55.9f)
+                    horizontalLineTo(70.5f)
+                    arcTo(1f, 1f, 0f, false, true, 69.5f, 54.9f)
+                    verticalLineTo(49.5f)
+                    arcTo(1f, 1f, 0f, false, true, 70.5f, 48.5f)
                     close()
                 }
             }
@@ -1214,7 +1347,7 @@ object OutpostArt {
                     lineTo(26f, 111f)
                     close()
                 }
-                shape(fill = SolidColor(Color(0xFF3B3F44)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                shape(fill = SolidColor(Color(0xFF1C1915)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(80f, 128f)
                     lineTo(80f, 96f)
                     quadTo(80f, 82f, 100f, 82f)
@@ -1223,17 +1356,155 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("glow", team = false, bounds = floatArrayOf(94f, 88f, 106f, 92f)) {
-                shape(fill = SolidColor(Color(0xFFFFD65A)), stroke = null, width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
-                    moveTo(96f, 88f)
-                    horizontalLineTo(104f)
-                    arcTo(2f, 2f, 0f, false, true, 106f, 90f)
-                    verticalLineTo(90f)
-                    arcTo(2f, 2f, 0f, false, true, 104f, 92f)
-                    horizontalLineTo(96f)
-                    arcTo(2f, 2f, 0f, false, true, 94f, 90f)
-                    verticalLineTo(90f)
-                    arcTo(2f, 2f, 0f, false, true, 96f, 88f)
+            layer("peek", team = false, bounds = floatArrayOf(87.5f, 91.5f, 112.5f, 127.5f)) {
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(95f, 110f)
+                    horizontalLineTo(105f)
+                    arcTo(6f, 6f, 0f, false, true, 111f, 116f)
+                    verticalLineTo(120f)
+                    arcTo(6f, 6f, 0f, false, true, 105f, 126f)
+                    horizontalLineTo(95f)
+                    arcTo(6f, 6f, 0f, false, true, 89f, 120f)
+                    verticalLineTo(116f)
+                    arcTo(6f, 6f, 0f, false, true, 95f, 110f)
+                    close()
+                }
+            }
+            layer("peek", team = true, bounds = floatArrayOf(87.5f, 91.5f, 112.5f, 127.5f)) {
+                shape(fill = TEAM_FILL, stroke = null, width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(91.5f, 116f)
+                    horizontalLineTo(108.5f)
+                    arcTo(1.5f, 1.5f, 0f, false, true, 110f, 117.5f)
+                    verticalLineTo(118.5f)
+                    arcTo(1.5f, 1.5f, 0f, false, true, 108.5f, 120f)
+                    horizontalLineTo(91.5f)
+                    arcTo(1.5f, 1.5f, 0f, false, true, 90f, 118.5f)
+                    verticalLineTo(117.5f)
+                    arcTo(1.5f, 1.5f, 0f, false, true, 91.5f, 116f)
+                    close()
+                }
+            }
+            layer("peek", team = false, bounds = floatArrayOf(87.5f, 91.5f, 112.5f, 127.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(91.5f, 116f)
+                    horizontalLineTo(108.5f)
+                    arcTo(1.5f, 1.5f, 0f, false, true, 110f, 117.5f)
+                    verticalLineTo(118.5f)
+                    arcTo(1.5f, 1.5f, 0f, false, true, 108.5f, 120f)
+                    horizontalLineTo(91.5f)
+                    arcTo(1.5f, 1.5f, 0f, false, true, 90f, 118.5f)
+                    verticalLineTo(117.5f)
+                    arcTo(1.5f, 1.5f, 0f, false, true, 91.5f, 116f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(91f, 102f)
+                    arcTo(9f, 9f, 0f, true, false, 109f, 102f)
+                    arcTo(9f, 9f, 0f, true, false, 91f, 102f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF7FD4FF)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(103f, 98f)
+                    horizontalLineTo(107f)
+                    arcTo(3f, 3f, 0f, false, true, 110f, 101f)
+                    verticalLineTo(101f)
+                    arcTo(3f, 3f, 0f, false, true, 107f, 104f)
+                    horizontalLineTo(103f)
+                    arcTo(3f, 3f, 0f, false, true, 100f, 101f)
+                    verticalLineTo(101f)
+                    arcTo(3f, 3f, 0f, false, true, 103f, 98f)
+                    close()
+                }
+            }
+            layer("door", team = false, bounds = floatArrayOf(78.5f, 80.5f, 121.5f, 129.5f)) {
+                shape(fill = SolidColor(Color(0xFF6B5A45)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(80f, 128f)
+                    lineTo(80f, 96f)
+                    quadTo(80f, 82f, 100f, 82f)
+                    quadTo(120f, 82f, 120f, 96f)
+                    lineTo(120f, 128f)
+                    close()
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF4A3D2F)), width = 2f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(93f, 85f)
+                    lineTo(93f, 127f)
+                    moveTo(107f, 85f)
+                    lineTo(107f, 127f)
+                }
+                shape(fill = SolidColor(Color(0xFFD9C27A)), stroke = SolidColor(Color(0xFF15110D)), width = 1.5f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(111.8f, 110f)
+                    arcTo(2.2f, 2.2f, 0f, true, false, 116.2f, 110f)
+                    arcTo(2.2f, 2.2f, 0f, true, false, 111.8f, 110f)
+                    close()
+                }
+            }
+            layer("base", team = false, bounds = floatArrayOf(124.75f, 111.75f, 147.25f, 128.75f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 2.5f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(126f, 128f)
+                    lineTo(126f, 113f)
+                    lineTo(146f, 113f)
+                    lineTo(146f, 128f)
+                }
+                shape(fill = SolidColor(Color(0xFF8D8F90)), stroke = null, width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(129f, 116.5f)
+                    horizontalLineTo(143f)
+                    arcTo(1f, 1f, 0f, false, true, 144f, 117.5f)
+                    verticalLineTo(117.9f)
+                    arcTo(1f, 1f, 0f, false, true, 143f, 118.9f)
+                    horizontalLineTo(129f)
+                    arcTo(1f, 1f, 0f, false, true, 128f, 117.9f)
+                    verticalLineTo(117.5f)
+                    arcTo(1f, 1f, 0f, false, true, 129f, 116.5f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF3B3F44)), stroke = SolidColor(Color(0xFF15110D)), width = 2f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(126.1f, 117.7f)
+                    arcTo(3.4f, 3.4f, 0f, true, false, 132.9f, 117.7f)
+                    arcTo(3.4f, 3.4f, 0f, true, false, 126.1f, 117.7f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF3B3F44)), stroke = SolidColor(Color(0xFF15110D)), width = 2f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(139.1f, 117.7f)
+                    arcTo(3.4f, 3.4f, 0f, true, false, 145.9f, 117.7f)
+                    arcTo(3.4f, 3.4f, 0f, true, false, 139.1f, 117.7f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF8D8F90)), stroke = null, width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(129f, 123f)
+                    horizontalLineTo(143f)
+                    arcTo(1f, 1f, 0f, false, true, 144f, 124f)
+                    verticalLineTo(124.4f)
+                    arcTo(1f, 1f, 0f, false, true, 143f, 125.4f)
+                    horizontalLineTo(129f)
+                    arcTo(1f, 1f, 0f, false, true, 128f, 124.4f)
+                    verticalLineTo(124f)
+                    arcTo(1f, 1f, 0f, false, true, 129f, 123f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF3B3F44)), stroke = SolidColor(Color(0xFF15110D)), width = 2f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(126.1f, 124.2f)
+                    arcTo(3.4f, 3.4f, 0f, true, false, 132.9f, 124.2f)
+                    arcTo(3.4f, 3.4f, 0f, true, false, 126.1f, 124.2f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF3B3F44)), stroke = SolidColor(Color(0xFF15110D)), width = 2f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(139.1f, 124.2f)
+                    arcTo(3.4f, 3.4f, 0f, true, false, 145.9f, 124.2f)
+                    arcTo(3.4f, 3.4f, 0f, true, false, 139.1f, 124.2f)
+                    close()
+                }
+            }
+            layer("glow", team = false, bounds = floatArrayOf(92f, 71f, 108f, 78f)) {
+                shape(fill = SolidColor(Color(0xFFFFD65A)), stroke = SolidColor(Color(0xFF15110D)), width = 2f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(95.5f, 72f)
+                    horizontalLineTo(104.5f)
+                    arcTo(2.5f, 2.5f, 0f, false, true, 107f, 74.5f)
+                    verticalLineTo(74.5f)
+                    arcTo(2.5f, 2.5f, 0f, false, true, 104.5f, 77f)
+                    horizontalLineTo(95.5f)
+                    arcTo(2.5f, 2.5f, 0f, false, true, 93f, 74.5f)
+                    verticalLineTo(74.5f)
+                    arcTo(2.5f, 2.5f, 0f, false, true, 95.5f, 72f)
                     close()
                 }
             }
@@ -1322,6 +1593,58 @@ object OutpostArt {
                     lineTo(120f, 70f)
                     close()
                 }
+                shape(fill = SolidColor(Color(0xFF1C1915)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(42f, 78f)
+                    horizontalLineTo(134f)
+                    arcTo(2f, 2f, 0f, false, true, 136f, 80f)
+                    verticalLineTo(128f)
+                    arcTo(2f, 2f, 0f, false, true, 134f, 130f)
+                    horizontalLineTo(42f)
+                    arcTo(2f, 2f, 0f, false, true, 40f, 128f)
+                    verticalLineTo(80f)
+                    arcTo(2f, 2f, 0f, false, true, 42f, 78f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF3B3F44)), stroke = SolidColor(Color(0xFF15110D)), width = 2f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(62f, 100f)
+                    horizontalLineTo(114f)
+                    arcTo(6f, 6f, 0f, false, true, 120f, 106f)
+                    verticalLineTo(120f)
+                    arcTo(6f, 6f, 0f, false, true, 114f, 126f)
+                    horizontalLineTo(62f)
+                    arcTo(6f, 6f, 0f, false, true, 56f, 120f)
+                    verticalLineTo(106f)
+                    arcTo(6f, 6f, 0f, false, true, 62f, 100f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF4A4F55)), stroke = SolidColor(Color(0xFF15110D)), width = 2f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(68f, 94f)
+                    horizontalLineTo(108f)
+                    arcTo(4f, 4f, 0f, false, true, 112f, 98f)
+                    verticalLineTo(100f)
+                    arcTo(4f, 4f, 0f, false, true, 108f, 104f)
+                    horizontalLineTo(68f)
+                    arcTo(4f, 4f, 0f, false, true, 64f, 100f)
+                    verticalLineTo(98f)
+                    arcTo(4f, 4f, 0f, false, true, 68f, 94f)
+                    close()
+                }
+            }
+            layer("glow", team = false, bounds = floatArrayOf(59.25f, 107.25f, 116.75f, 116.75f)) {
+                shape(fill = SolidColor(Color(0xFFFFD65A)), stroke = SolidColor(Color(0xFF15110D)), width = 1.5f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(60f, 112f)
+                    arcTo(4f, 4f, 0f, true, false, 68f, 112f)
+                    arcTo(4f, 4f, 0f, true, false, 60f, 112f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFFFFD65A)), stroke = SolidColor(Color(0xFF15110D)), width = 1.5f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(108f, 112f)
+                    arcTo(4f, 4f, 0f, true, false, 116f, 112f)
+                    arcTo(4f, 4f, 0f, true, false, 108f, 112f)
+                    close()
+                }
+            }
+            layer("garage", team = false, bounds = floatArrayOf(38.5f, 76.5f, 137.5f, 131.5f)) {
                 shape(fill = SolidColor(Color(0xFF4A4F55)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(42f, 78f)
                     horizontalLineTo(134f)
@@ -1335,7 +1658,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("base", team = true, bounds = floatArrayOf(40f, 78f, 136f, 130f)) {
+            layer("garage", team = true, bounds = floatArrayOf(38.5f, 76.5f, 137.5f, 131.5f)) {
                 shape(fill = TEAM_FILL, stroke = null, width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(40f, 78f)
                     lineTo(56f, 78f)
@@ -1364,7 +1687,15 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("base", team = false, bounds = floatArrayOf(38.5f, 19.5f, 196f, 131.5f)) {
+            layer("garage", team = false, bounds = floatArrayOf(38.5f, 76.5f, 137.5f, 131.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF3B3F44)), width = 1.5f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(40f, 91f)
+                    lineTo(136f, 91f)
+                    moveTo(40f, 104f)
+                    lineTo(136f, 104f)
+                    moveTo(40f, 117f)
+                    lineTo(136f, 117f)
+                }
                 shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(42f, 78f)
                     horizontalLineTo(134f)
@@ -1377,6 +1708,8 @@ object OutpostArt {
                     arcTo(2f, 2f, 0f, false, true, 42f, 78f)
                     close()
                 }
+            }
+            layer("base", team = false, bounds = floatArrayOf(146.5f, 19.5f, 196f, 103.5f)) {
                 shape(fill = SolidColor(Color(0xFF7FD4FF)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(151f, 86f)
                     horizontalLineTo(167f)
@@ -1426,6 +1759,1033 @@ object OutpostArt {
                 shape(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF15110D)), width = 2f, cap = StrokeCap.Butt, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(156f, 117f)
                     lineTo(170f, 117f)
+                }
+            }
+        }
+    }
+
+    val Yard: SpriteArt by lazy {
+        sprite(ArtId("outpost.yard"), 200f, 150f) {
+            layer("base", team = false, bounds = floatArrayOf(8f, 35.5f, 192f, 147f)) {
+                shape(fill = SolidColor(Color(0xFF000000)), stroke = null, width = 1f, cap = StrokeCap.Butt, join = StrokeJoin.Miter, alpha = 0.3f) {
+                    moveTo(8f, 136f)
+                    arcTo(92f, 11f, 0f, true, false, 192f, 136f)
+                    arcTo(92f, 11f, 0f, true, false, 8f, 136f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFFA2916F)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(20f, 134f)
+                    arcTo(40f, 7f, 0f, true, false, 100f, 134f)
+                    arcTo(40f, 7f, 0f, true, false, 20f, 134f)
+                    close()
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 9f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(28f, 134f)
+                    lineTo(28f, 40f)
+                    moveTo(92f, 134f)
+                    lineTo(92f, 40f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF5A5E35)), width = 5f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(28f, 134f)
+                    lineTo(28f, 40f)
+                    moveTo(92f, 134f)
+                    lineTo(92f, 40f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 7f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(24f, 42f)
+                    lineTo(96f, 42f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFFC9CED2)), width = 3.5f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(24f, 42f)
+                    lineTo(96f, 42f)
+                }
+            }
+            layer("poseA", team = false, bounds = floatArrayOf(46.5f, 40f, 73.5f, 126.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 8f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(52f, 44f)
+                    lineTo(54f, 72f)
+                    moveTo(68f, 44f)
+                    lineTo(66f, 72f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF6F8796)), width = 4f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(52f, 44f)
+                    lineTo(54f, 72f)
+                    moveTo(68f, 44f)
+                    lineTo(66f, 72f)
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(57f, 68f)
+                    horizontalLineTo(63f)
+                    arcTo(9f, 9f, 0f, false, true, 72f, 77f)
+                    verticalLineTo(89f)
+                    arcTo(9f, 9f, 0f, false, true, 63f, 98f)
+                    horizontalLineTo(57f)
+                    arcTo(9f, 9f, 0f, false, true, 48f, 89f)
+                    verticalLineTo(77f)
+                    arcTo(9f, 9f, 0f, false, true, 57f, 68f)
+                    close()
+                }
+            }
+            layer("poseA", team = true, bounds = floatArrayOf(46.5f, 40f, 73.5f, 126.5f)) {
+                shape(fill = TEAM_FILL, stroke = null, width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(51f, 82f)
+                    horizontalLineTo(69f)
+                    arcTo(2f, 2f, 0f, false, true, 71f, 84f)
+                    verticalLineTo(85f)
+                    arcTo(2f, 2f, 0f, false, true, 69f, 87f)
+                    horizontalLineTo(51f)
+                    arcTo(2f, 2f, 0f, false, true, 49f, 85f)
+                    verticalLineTo(84f)
+                    arcTo(2f, 2f, 0f, false, true, 51f, 82f)
+                    close()
+                }
+            }
+            layer("poseA", team = false, bounds = floatArrayOf(46.5f, 40f, 73.5f, 126.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(51f, 82f)
+                    horizontalLineTo(69f)
+                    arcTo(2f, 2f, 0f, false, true, 71f, 84f)
+                    verticalLineTo(85f)
+                    arcTo(2f, 2f, 0f, false, true, 69f, 87f)
+                    horizontalLineTo(51f)
+                    arcTo(2f, 2f, 0f, false, true, 49f, 85f)
+                    verticalLineTo(84f)
+                    arcTo(2f, 2f, 0f, false, true, 51f, 82f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(50f, 60f)
+                    arcTo(10f, 10f, 0f, true, false, 70f, 60f)
+                    arcTo(10f, 10f, 0f, true, false, 50f, 60f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF7FD4FF)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(63f, 56f)
+                    horizontalLineTo(68f)
+                    arcTo(3f, 3f, 0f, false, true, 71f, 59f)
+                    verticalLineTo(59f)
+                    arcTo(3f, 3f, 0f, false, true, 68f, 62f)
+                    horizontalLineTo(63f)
+                    arcTo(3f, 3f, 0f, false, true, 60f, 59f)
+                    verticalLineTo(59f)
+                    arcTo(3f, 3f, 0f, false, true, 63f, 56f)
+                    close()
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 9f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(54f, 98f)
+                    lineTo(52f, 122f)
+                    moveTo(66f, 98f)
+                    lineTo(68f, 122f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF4B5D69)), width = 5f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(54f, 98f)
+                    lineTo(52f, 122f)
+                    moveTo(66f, 98f)
+                    lineTo(68f, 122f)
+                }
+            }
+            layer("poseB", team = false, bounds = floatArrayOf(45.5f, 24.5f, 74.5f, 112.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 8f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(52f, 44f)
+                    lineTo(50f, 54f)
+                    lineTo(56f, 60f)
+                    moveTo(68f, 44f)
+                    lineTo(70f, 54f)
+                    lineTo(64f, 60f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF6F8796)), width = 4f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(52f, 44f)
+                    lineTo(50f, 54f)
+                    lineTo(56f, 60f)
+                    moveTo(68f, 44f)
+                    lineTo(70f, 54f)
+                    lineTo(64f, 60f)
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(57f, 52f)
+                    horizontalLineTo(63f)
+                    arcTo(9f, 9f, 0f, false, true, 72f, 61f)
+                    verticalLineTo(73f)
+                    arcTo(9f, 9f, 0f, false, true, 63f, 82f)
+                    horizontalLineTo(57f)
+                    arcTo(9f, 9f, 0f, false, true, 48f, 73f)
+                    verticalLineTo(61f)
+                    arcTo(9f, 9f, 0f, false, true, 57f, 52f)
+                    close()
+                }
+            }
+            layer("poseB", team = true, bounds = floatArrayOf(45.5f, 24.5f, 74.5f, 112.5f)) {
+                shape(fill = TEAM_FILL, stroke = null, width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(51f, 66f)
+                    horizontalLineTo(69f)
+                    arcTo(2f, 2f, 0f, false, true, 71f, 68f)
+                    verticalLineTo(69f)
+                    arcTo(2f, 2f, 0f, false, true, 69f, 71f)
+                    horizontalLineTo(51f)
+                    arcTo(2f, 2f, 0f, false, true, 49f, 69f)
+                    verticalLineTo(68f)
+                    arcTo(2f, 2f, 0f, false, true, 51f, 66f)
+                    close()
+                }
+            }
+            layer("poseB", team = false, bounds = floatArrayOf(45.5f, 24.5f, 74.5f, 112.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(51f, 66f)
+                    horizontalLineTo(69f)
+                    arcTo(2f, 2f, 0f, false, true, 71f, 68f)
+                    verticalLineTo(69f)
+                    arcTo(2f, 2f, 0f, false, true, 69f, 71f)
+                    horizontalLineTo(51f)
+                    arcTo(2f, 2f, 0f, false, true, 49f, 69f)
+                    verticalLineTo(68f)
+                    arcTo(2f, 2f, 0f, false, true, 51f, 66f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(50f, 36f)
+                    arcTo(10f, 10f, 0f, true, false, 70f, 36f)
+                    arcTo(10f, 10f, 0f, true, false, 50f, 36f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF7FD4FF)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(63f, 32f)
+                    horizontalLineTo(68f)
+                    arcTo(3f, 3f, 0f, false, true, 71f, 35f)
+                    verticalLineTo(35f)
+                    arcTo(3f, 3f, 0f, false, true, 68f, 38f)
+                    horizontalLineTo(63f)
+                    arcTo(3f, 3f, 0f, false, true, 60f, 35f)
+                    verticalLineTo(35f)
+                    arcTo(3f, 3f, 0f, false, true, 63f, 32f)
+                    close()
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 9f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(54f, 82f)
+                    lineTo(50f, 100f)
+                    lineTo(56f, 108f)
+                    moveTo(66f, 82f)
+                    lineTo(70f, 100f)
+                    lineTo(64f, 108f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF4B5D69)), width = 5f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(54f, 82f)
+                    lineTo(50f, 100f)
+                    lineTo(56f, 108f)
+                    moveTo(66f, 82f)
+                    lineTo(70f, 100f)
+                    lineTo(64f, 108f)
+                }
+            }
+            layer("base", team = false, bounds = floatArrayOf(113.5f, 27.5f, 164.5f, 138.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 9f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(124f, 134f)
+                    lineTo(124f, 32f)
+                    lineTo(160f, 32f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF5A5E35)), width = 5f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(124f, 134f)
+                    lineTo(124f, 32f)
+                    lineTo(160f, 32f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 5f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(116f, 134f)
+                    lineTo(132f, 134f)
+                }
+            }
+            layer("swing", team = false, bounds = floatArrayOf(142.5f, 30.75f, 165.5f, 91.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 2.5f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(154f, 32f)
+                    lineTo(154f, 46f)
+                }
+                shape(fill = SolidColor(Color(0xFFB5523B)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(153f, 46f)
+                    horizontalLineTo(155f)
+                    arcTo(9f, 9f, 0f, false, true, 164f, 55f)
+                    verticalLineTo(81f)
+                    arcTo(9f, 9f, 0f, false, true, 155f, 90f)
+                    horizontalLineTo(153f)
+                    arcTo(9f, 9f, 0f, false, true, 144f, 81f)
+                    verticalLineTo(55f)
+                    arcTo(9f, 9f, 0f, false, true, 153f, 46f)
+                    close()
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF7D3426)), width = 2.5f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(144f, 56f)
+                    lineTo(164f, 56f)
+                    moveTo(144f, 80f)
+                    lineTo(164f, 80f)
+                }
+            }
+            layer("base", team = false, bounds = floatArrayOf(170.5f, 78.5f, 199.5f, 135.5f)) {
+                shape(fill = SolidColor(Color(0xFF4B5D69)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(179f, 112f)
+                    horizontalLineTo(181f)
+                    arcTo(3f, 3f, 0f, false, true, 184f, 115f)
+                    verticalLineTo(131f)
+                    arcTo(3f, 3f, 0f, false, true, 181f, 134f)
+                    horizontalLineTo(179f)
+                    arcTo(3f, 3f, 0f, false, true, 176f, 131f)
+                    verticalLineTo(115f)
+                    arcTo(3f, 3f, 0f, false, true, 179f, 112f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF4B5D69)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(189f, 112f)
+                    horizontalLineTo(191f)
+                    arcTo(3f, 3f, 0f, false, true, 194f, 115f)
+                    verticalLineTo(131f)
+                    arcTo(3f, 3f, 0f, false, true, 191f, 134f)
+                    horizontalLineTo(189f)
+                    arcTo(3f, 3f, 0f, false, true, 186f, 131f)
+                    verticalLineTo(115f)
+                    arcTo(3f, 3f, 0f, false, true, 189f, 112f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(181f, 80f)
+                    horizontalLineTo(189f)
+                    arcTo(9f, 9f, 0f, false, true, 198f, 89f)
+                    verticalLineTo(107f)
+                    arcTo(9f, 9f, 0f, false, true, 189f, 116f)
+                    horizontalLineTo(181f)
+                    arcTo(9f, 9f, 0f, false, true, 172f, 107f)
+                    verticalLineTo(89f)
+                    arcTo(9f, 9f, 0f, false, true, 181f, 80f)
+                    close()
+                }
+            }
+            layer("base", team = true, bounds = floatArrayOf(173f, 96f, 197f, 101f)) {
+                shape(fill = TEAM_FILL, stroke = null, width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(175f, 96f)
+                    horizontalLineTo(195f)
+                    arcTo(2f, 2f, 0f, false, true, 197f, 98f)
+                    verticalLineTo(99f)
+                    arcTo(2f, 2f, 0f, false, true, 195f, 101f)
+                    horizontalLineTo(175f)
+                    arcTo(2f, 2f, 0f, false, true, 173f, 99f)
+                    verticalLineTo(98f)
+                    arcTo(2f, 2f, 0f, false, true, 175f, 96f)
+                    close()
+                }
+            }
+            layer("base", team = false, bounds = floatArrayOf(169.5f, 55.5f, 198.5f, 102.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(175f, 96f)
+                    horizontalLineTo(195f)
+                    arcTo(2f, 2f, 0f, false, true, 197f, 98f)
+                    verticalLineTo(99f)
+                    arcTo(2f, 2f, 0f, false, true, 195f, 101f)
+                    horizontalLineTo(175f)
+                    arcTo(2f, 2f, 0f, false, true, 173f, 99f)
+                    verticalLineTo(98f)
+                    arcTo(2f, 2f, 0f, false, true, 175f, 96f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(173f, 68f)
+                    arcTo(11f, 11f, 0f, true, false, 195f, 68f)
+                    arcTo(11f, 11f, 0f, true, false, 173f, 68f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF7FD4FF)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(174f, 63f)
+                    horizontalLineTo(179f)
+                    arcTo(3f, 3f, 0f, false, true, 182f, 66f)
+                    verticalLineTo(66f)
+                    arcTo(3f, 3f, 0f, false, true, 179f, 69f)
+                    horizontalLineTo(174f)
+                    arcTo(3f, 3f, 0f, false, true, 171f, 66f)
+                    verticalLineTo(66f)
+                    arcTo(3f, 3f, 0f, false, true, 174f, 63f)
+                    close()
+                }
+            }
+            layer("punchA", team = false, bounds = floatArrayOf(158.5f, 85.5f, 180.5f, 103.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 9f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(176f, 90f)
+                    lineTo(168f, 98f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF6F8796)), width = 5f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(176f, 90f)
+                    lineTo(168f, 98f)
+                }
+                shape(fill = SolidColor(Color(0xFFD64545)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(160f, 96f)
+                    arcTo(6f, 6f, 0f, true, false, 172f, 96f)
+                    arcTo(6f, 6f, 0f, true, false, 160f, 96f)
+                    close()
+                }
+            }
+            layer("punchB", team = false, bounds = floatArrayOf(153.5f, 73.5f, 180.5f, 92.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 9f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(176f, 88f)
+                    lineTo(162f, 82f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF6F8796)), width = 5f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(176f, 88f)
+                    lineTo(162f, 82f)
+                }
+                shape(fill = SolidColor(Color(0xFFD64545)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(155f, 81f)
+                    arcTo(6f, 6f, 0f, true, false, 167f, 81f)
+                    arcTo(6f, 6f, 0f, true, false, 155f, 81f)
+                    close()
+                }
+            }
+        }
+    }
+
+    val DrillSquat: SpriteArt by lazy {
+        sprite(ArtId("outpost.drill.squat"), 120f, 120f) {
+            layer("base", team = false, bounds = floatArrayOf(30f, 100f, 90f, 112f)) {
+                shape(fill = SolidColor(Color(0xFF000000)), stroke = null, width = 1f, cap = StrokeCap.Butt, join = StrokeJoin.Miter, alpha = 0.35f) {
+                    moveTo(30f, 106f)
+                    arcTo(30f, 6f, 0f, true, false, 90f, 106f)
+                    arcTo(30f, 6f, 0f, true, false, 30f, 106f)
+                    close()
+                }
+            }
+            layer("poseA", team = false, bounds = floatArrayOf(21f, 18.5f, 99f, 105.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 11f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(53f, 76f)
+                    lineTo(52f, 100f)
+                    moveTo(67f, 76f)
+                    lineTo(68f, 100f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF4B5D69)), width = 7f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(53f, 76f)
+                    lineTo(52f, 100f)
+                    moveTo(67f, 76f)
+                    lineTo(68f, 100f)
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(54f, 44f)
+                    horizontalLineTo(66f)
+                    arcTo(10f, 10f, 0f, false, true, 76f, 54f)
+                    verticalLineTo(68f)
+                    arcTo(10f, 10f, 0f, false, true, 66f, 78f)
+                    horizontalLineTo(54f)
+                    arcTo(10f, 10f, 0f, false, true, 44f, 68f)
+                    verticalLineTo(54f)
+                    arcTo(10f, 10f, 0f, false, true, 54f, 44f)
+                    close()
+                }
+            }
+            layer("poseA", team = true, bounds = floatArrayOf(21f, 18.5f, 99f, 105.5f)) {
+                shape(fill = TEAM_FILL, stroke = null, width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(47f, 62f)
+                    horizontalLineTo(73f)
+                    arcTo(2f, 2f, 0f, false, true, 75f, 64f)
+                    verticalLineTo(66f)
+                    arcTo(2f, 2f, 0f, false, true, 73f, 68f)
+                    horizontalLineTo(47f)
+                    arcTo(2f, 2f, 0f, false, true, 45f, 66f)
+                    verticalLineTo(64f)
+                    arcTo(2f, 2f, 0f, false, true, 47f, 62f)
+                    close()
+                }
+            }
+            layer("poseA", team = false, bounds = floatArrayOf(21f, 18.5f, 99f, 105.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(47f, 62f)
+                    horizontalLineTo(73f)
+                    arcTo(2f, 2f, 0f, false, true, 75f, 64f)
+                    verticalLineTo(66f)
+                    arcTo(2f, 2f, 0f, false, true, 73f, 68f)
+                    horizontalLineTo(47f)
+                    arcTo(2f, 2f, 0f, false, true, 45f, 66f)
+                    verticalLineTo(64f)
+                    arcTo(2f, 2f, 0f, false, true, 47f, 62f)
+                    close()
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 10f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(46f, 52f)
+                    lineTo(26f, 56f)
+                    moveTo(74f, 52f)
+                    lineTo(94f, 56f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF6F8796)), width = 6f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(46f, 52f)
+                    lineTo(26f, 56f)
+                    moveTo(74f, 52f)
+                    lineTo(94f, 56f)
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(48f, 32f)
+                    arcTo(12f, 12f, 0f, true, false, 72f, 32f)
+                    arcTo(12f, 12f, 0f, true, false, 48f, 32f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF7FD4FF)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(56.5f, 28f)
+                    horizontalLineTo(63.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 67f, 31.5f)
+                    verticalLineTo(31.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 63.5f, 35f)
+                    horizontalLineTo(56.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 53f, 31.5f)
+                    verticalLineTo(31.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 56.5f, 28f)
+                    close()
+                }
+            }
+            layer("poseB", team = false, bounds = floatArrayOf(19f, 30.5f, 101f, 107.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 11f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(52f, 86f)
+                    lineTo(40f, 94f)
+                    lineTo(48f, 102f)
+                    moveTo(68f, 86f)
+                    lineTo(80f, 94f)
+                    lineTo(72f, 102f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF4B5D69)), width = 7f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(52f, 86f)
+                    lineTo(40f, 94f)
+                    lineTo(48f, 102f)
+                    moveTo(68f, 86f)
+                    lineTo(80f, 94f)
+                    lineTo(72f, 102f)
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(54f, 56f)
+                    horizontalLineTo(66f)
+                    arcTo(10f, 10f, 0f, false, true, 76f, 66f)
+                    verticalLineTo(80f)
+                    arcTo(10f, 10f, 0f, false, true, 66f, 90f)
+                    horizontalLineTo(54f)
+                    arcTo(10f, 10f, 0f, false, true, 44f, 80f)
+                    verticalLineTo(66f)
+                    arcTo(10f, 10f, 0f, false, true, 54f, 56f)
+                    close()
+                }
+            }
+            layer("poseB", team = true, bounds = floatArrayOf(19f, 30.5f, 101f, 107.5f)) {
+                shape(fill = TEAM_FILL, stroke = null, width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(47f, 74f)
+                    horizontalLineTo(73f)
+                    arcTo(2f, 2f, 0f, false, true, 75f, 76f)
+                    verticalLineTo(78f)
+                    arcTo(2f, 2f, 0f, false, true, 73f, 80f)
+                    horizontalLineTo(47f)
+                    arcTo(2f, 2f, 0f, false, true, 45f, 78f)
+                    verticalLineTo(76f)
+                    arcTo(2f, 2f, 0f, false, true, 47f, 74f)
+                    close()
+                }
+            }
+            layer("poseB", team = false, bounds = floatArrayOf(19f, 30.5f, 101f, 107.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(47f, 74f)
+                    horizontalLineTo(73f)
+                    arcTo(2f, 2f, 0f, false, true, 75f, 76f)
+                    verticalLineTo(78f)
+                    arcTo(2f, 2f, 0f, false, true, 73f, 80f)
+                    horizontalLineTo(47f)
+                    arcTo(2f, 2f, 0f, false, true, 45f, 78f)
+                    verticalLineTo(76f)
+                    arcTo(2f, 2f, 0f, false, true, 47f, 74f)
+                    close()
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 10f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(46f, 64f)
+                    lineTo(24f, 66f)
+                    moveTo(74f, 64f)
+                    lineTo(96f, 66f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF6F8796)), width = 6f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(46f, 64f)
+                    lineTo(24f, 66f)
+                    moveTo(74f, 64f)
+                    lineTo(96f, 66f)
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(48f, 44f)
+                    arcTo(12f, 12f, 0f, true, false, 72f, 44f)
+                    arcTo(12f, 12f, 0f, true, false, 48f, 44f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF7FD4FF)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(56.5f, 40f)
+                    horizontalLineTo(63.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 67f, 43.5f)
+                    verticalLineTo(43.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 63.5f, 47f)
+                    horizontalLineTo(56.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 53f, 43.5f)
+                    verticalLineTo(43.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 56.5f, 40f)
+                    close()
+                }
+            }
+            layer("base", team = false, bounds = floatArrayOf(40.5f, 98.5f, 79.5f, 108.5f)) {
+                shape(fill = SolidColor(Color(0xFF2B2F33)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(45f, 100f)
+                    horizontalLineTo(55f)
+                    arcTo(3f, 3f, 0f, false, true, 58f, 103f)
+                    verticalLineTo(104f)
+                    arcTo(3f, 3f, 0f, false, true, 55f, 107f)
+                    horizontalLineTo(45f)
+                    arcTo(3f, 3f, 0f, false, true, 42f, 104f)
+                    verticalLineTo(103f)
+                    arcTo(3f, 3f, 0f, false, true, 45f, 100f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF2B2F33)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(65f, 100f)
+                    horizontalLineTo(75f)
+                    arcTo(3f, 3f, 0f, false, true, 78f, 103f)
+                    verticalLineTo(104f)
+                    arcTo(3f, 3f, 0f, false, true, 75f, 107f)
+                    horizontalLineTo(65f)
+                    arcTo(3f, 3f, 0f, false, true, 62f, 104f)
+                    verticalLineTo(103f)
+                    arcTo(3f, 3f, 0f, false, true, 65f, 100f)
+                    close()
+                }
+            }
+        }
+    }
+
+    val DrillPushup: SpriteArt by lazy {
+        sprite(ArtId("outpost.drill.pushup"), 120f, 120f) {
+            layer("base", team = false, bounds = floatArrayOf(16f, 98f, 104f, 110f)) {
+                shape(fill = SolidColor(Color(0xFF000000)), stroke = null, width = 1f, cap = StrokeCap.Butt, join = StrokeJoin.Miter, alpha = 0.35f) {
+                    moveTo(16f, 104f)
+                    arcTo(44f, 6f, 0f, true, false, 104f, 104f)
+                    arcTo(44f, 6f, 0f, true, false, 16f, 104f)
+                    close()
+                }
+            }
+            layer("poseA", team = false, bounds = floatArrayOf(10f, 52.5f, 106.5f, 106f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 9f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(84f, 74f)
+                    lineTo(86f, 100f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF6F8796)), width = 5f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(84f, 74f)
+                    lineTo(86f, 100f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 16f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(18f, 98f)
+                    lineTo(80f, 72f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF6F8796)), width = 12f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(18f, 98f)
+                    lineTo(80f, 72f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF4B5D69)), width = 12f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(18f, 98f)
+                    lineTo(44f, 87f)
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(84f, 64f)
+                    arcTo(10f, 10f, 0f, true, false, 104f, 64f)
+                    arcTo(10f, 10f, 0f, true, false, 84f, 64f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF7FD4FF)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(98f, 60f)
+                    horizontalLineTo(102f)
+                    arcTo(3f, 3f, 0f, false, true, 105f, 63f)
+                    verticalLineTo(63f)
+                    arcTo(3f, 3f, 0f, false, true, 102f, 66f)
+                    horizontalLineTo(98f)
+                    arcTo(3f, 3f, 0f, false, true, 95f, 63f)
+                    verticalLineTo(63f)
+                    arcTo(3f, 3f, 0f, false, true, 98f, 60f)
+                    close()
+                }
+            }
+            layer("poseB", team = false, bounds = floatArrayOf(10f, 72.5f, 107.5f, 106f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 9f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(82f, 90f)
+                    lineTo(72f, 94f)
+                    lineTo(84f, 100f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF6F8796)), width = 5f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(82f, 90f)
+                    lineTo(72f, 94f)
+                    lineTo(84f, 100f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 16f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(18f, 98f)
+                    lineTo(82f, 88f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF6F8796)), width = 12f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(18f, 98f)
+                    lineTo(82f, 88f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF4B5D69)), width = 12f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(18f, 98f)
+                    lineTo(44f, 94f)
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(85f, 84f)
+                    arcTo(10f, 10f, 0f, true, false, 105f, 84f)
+                    arcTo(10f, 10f, 0f, true, false, 85f, 84f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF7FD4FF)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(99f, 80f)
+                    horizontalLineTo(103f)
+                    arcTo(3f, 3f, 0f, false, true, 106f, 83f)
+                    verticalLineTo(83f)
+                    arcTo(3f, 3f, 0f, false, true, 103f, 86f)
+                    horizontalLineTo(99f)
+                    arcTo(3f, 3f, 0f, false, true, 96f, 83f)
+                    verticalLineTo(83f)
+                    arcTo(3f, 3f, 0f, false, true, 99f, 80f)
+                    close()
+                }
+            }
+            layer("base", team = false, bounds = floatArrayOf(6.5f, 96.5f, 21.5f, 105.5f)) {
+                shape(fill = SolidColor(Color(0xFF2B2F33)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(11f, 98f)
+                    horizontalLineTo(17f)
+                    arcTo(3f, 3f, 0f, false, true, 20f, 101f)
+                    verticalLineTo(101f)
+                    arcTo(3f, 3f, 0f, false, true, 17f, 104f)
+                    horizontalLineTo(11f)
+                    arcTo(3f, 3f, 0f, false, true, 8f, 101f)
+                    verticalLineTo(101f)
+                    arcTo(3f, 3f, 0f, false, true, 11f, 98f)
+                    close()
+                }
+            }
+        }
+    }
+
+    val DrillSitup: SpriteArt by lazy {
+        sprite(ArtId("outpost.drill.situp"), 120f, 120f) {
+            layer("base", team = false, bounds = floatArrayOf(16f, 74f, 104f, 110f)) {
+                shape(fill = SolidColor(Color(0xFF000000)), stroke = null, width = 1f, cap = StrokeCap.Butt, join = StrokeJoin.Miter, alpha = 0.35f) {
+                    moveTo(16f, 104f)
+                    arcTo(44f, 6f, 0f, true, false, 104f, 104f)
+                    arcTo(44f, 6f, 0f, true, false, 16f, 104f)
+                    close()
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 12f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(58f, 98f)
+                    lineTo(76f, 80f)
+                    lineTo(92f, 98f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF4B5D69)), width = 8f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(58f, 98f)
+                    lineTo(76f, 80f)
+                    lineTo(92f, 98f)
+                }
+                shape(fill = SolidColor(Color(0xFF2B2F33)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(91f, 96f)
+                    horizontalLineTo(99f)
+                    arcTo(3f, 3f, 0f, false, true, 102f, 99f)
+                    verticalLineTo(100f)
+                    arcTo(3f, 3f, 0f, false, true, 99f, 103f)
+                    horizontalLineTo(91f)
+                    arcTo(3f, 3f, 0f, false, true, 88f, 100f)
+                    verticalLineTo(99f)
+                    arcTo(3f, 3f, 0f, false, true, 91f, 96f)
+                    close()
+                }
+            }
+            layer("poseA", team = false, bounds = floatArrayOf(4.5f, 76f, 69f, 107f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 18f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(24f, 96f)
+                    lineTo(60f, 98f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF6F8796)), width = 14f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(24f, 96f)
+                    lineTo(60f, 98f)
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(6f, 92f)
+                    arcTo(10f, 10f, 0f, true, false, 26f, 92f)
+                    arcTo(10f, 10f, 0f, true, false, 6f, 92f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF7FD4FF)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(17f, 82f)
+                    horizontalLineTo(17f)
+                    arcTo(3f, 3f, 0f, false, true, 20f, 85f)
+                    verticalLineTo(89f)
+                    arcTo(3f, 3f, 0f, false, true, 17f, 92f)
+                    horizontalLineTo(17f)
+                    arcTo(3f, 3f, 0f, false, true, 14f, 89f)
+                    verticalLineTo(85f)
+                    arcTo(3f, 3f, 0f, false, true, 17f, 82f)
+                    close()
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 8f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(30f, 90f)
+                    lineTo(18f, 80f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF6F8796)), width = 4f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(30f, 90f)
+                    lineTo(18f, 80f)
+                }
+            }
+            layer("poseB", team = false, bounds = floatArrayOf(26.5f, 42.5f, 76f, 105f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 18f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(42f, 66f)
+                    lineTo(60f, 96f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF6F8796)), width = 14f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(42f, 66f)
+                    lineTo(60f, 96f)
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(28f, 54f)
+                    arcTo(10f, 10f, 0f, true, false, 48f, 54f)
+                    arcTo(10f, 10f, 0f, true, false, 28f, 54f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF7FD4FF)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(43f, 50f)
+                    horizontalLineTo(47f)
+                    arcTo(3f, 3f, 0f, false, true, 50f, 53f)
+                    verticalLineTo(53f)
+                    arcTo(3f, 3f, 0f, false, true, 47f, 56f)
+                    horizontalLineTo(43f)
+                    arcTo(3f, 3f, 0f, false, true, 40f, 53f)
+                    verticalLineTo(53f)
+                    arcTo(3f, 3f, 0f, false, true, 43f, 50f)
+                    close()
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 8f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(48f, 72f)
+                    lineTo(72f, 82f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF6F8796)), width = 4f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(48f, 72f)
+                    lineTo(72f, 82f)
+                }
+            }
+        }
+    }
+
+    val DrillJacks: SpriteArt by lazy {
+        sprite(ArtId("outpost.drill.jacks"), 120f, 120f) {
+            layer("base", team = false, bounds = floatArrayOf(30f, 100f, 90f, 112f)) {
+                shape(fill = SolidColor(Color(0xFF000000)), stroke = null, width = 1f, cap = StrokeCap.Butt, join = StrokeJoin.Miter, alpha = 0.35f) {
+                    moveTo(30f, 106f)
+                    arcTo(30f, 6f, 0f, true, false, 90f, 106f)
+                    arcTo(30f, 6f, 0f, true, false, 30f, 106f)
+                    close()
+                }
+            }
+            layer("poseA", team = false, bounds = floatArrayOf(35f, 18.5f, 85f, 107.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 11f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(54f, 76f)
+                    lineTo(52f, 100f)
+                    moveTo(66f, 76f)
+                    lineTo(68f, 100f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF4B5D69)), width = 7f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(54f, 76f)
+                    lineTo(52f, 100f)
+                    moveTo(66f, 76f)
+                    lineTo(68f, 100f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 10f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(46f, 52f)
+                    lineTo(40f, 80f)
+                    moveTo(74f, 52f)
+                    lineTo(80f, 80f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF6F8796)), width = 6f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(46f, 52f)
+                    lineTo(40f, 80f)
+                    moveTo(74f, 52f)
+                    lineTo(80f, 80f)
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(55f, 44f)
+                    horizontalLineTo(65f)
+                    arcTo(10f, 10f, 0f, false, true, 75f, 54f)
+                    verticalLineTo(68f)
+                    arcTo(10f, 10f, 0f, false, true, 65f, 78f)
+                    horizontalLineTo(55f)
+                    arcTo(10f, 10f, 0f, false, true, 45f, 68f)
+                    verticalLineTo(54f)
+                    arcTo(10f, 10f, 0f, false, true, 55f, 44f)
+                    close()
+                }
+            }
+            layer("poseA", team = true, bounds = floatArrayOf(35f, 18.5f, 85f, 107.5f)) {
+                shape(fill = TEAM_FILL, stroke = null, width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(48f, 62f)
+                    horizontalLineTo(72f)
+                    arcTo(2f, 2f, 0f, false, true, 74f, 64f)
+                    verticalLineTo(66f)
+                    arcTo(2f, 2f, 0f, false, true, 72f, 68f)
+                    horizontalLineTo(48f)
+                    arcTo(2f, 2f, 0f, false, true, 46f, 66f)
+                    verticalLineTo(64f)
+                    arcTo(2f, 2f, 0f, false, true, 48f, 62f)
+                    close()
+                }
+            }
+            layer("poseA", team = false, bounds = floatArrayOf(35f, 18.5f, 85f, 107.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(48f, 62f)
+                    horizontalLineTo(72f)
+                    arcTo(2f, 2f, 0f, false, true, 74f, 64f)
+                    verticalLineTo(66f)
+                    arcTo(2f, 2f, 0f, false, true, 72f, 68f)
+                    horizontalLineTo(48f)
+                    arcTo(2f, 2f, 0f, false, true, 46f, 66f)
+                    verticalLineTo(64f)
+                    arcTo(2f, 2f, 0f, false, true, 48f, 62f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(48f, 32f)
+                    arcTo(12f, 12f, 0f, true, false, 72f, 32f)
+                    arcTo(12f, 12f, 0f, true, false, 48f, 32f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF7FD4FF)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(56.5f, 28f)
+                    horizontalLineTo(63.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 67f, 31.5f)
+                    verticalLineTo(31.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 63.5f, 35f)
+                    horizontalLineTo(56.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 53f, 31.5f)
+                    verticalLineTo(31.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 56.5f, 28f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF2B2F33)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(45f, 99f)
+                    horizontalLineTo(53f)
+                    arcTo(3f, 3f, 0f, false, true, 56f, 102f)
+                    verticalLineTo(103f)
+                    arcTo(3f, 3f, 0f, false, true, 53f, 106f)
+                    horizontalLineTo(45f)
+                    arcTo(3f, 3f, 0f, false, true, 42f, 103f)
+                    verticalLineTo(102f)
+                    arcTo(3f, 3f, 0f, false, true, 45f, 99f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF2B2F33)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(67f, 99f)
+                    horizontalLineTo(75f)
+                    arcTo(3f, 3f, 0f, false, true, 78f, 102f)
+                    verticalLineTo(103f)
+                    arcTo(3f, 3f, 0f, false, true, 75f, 106f)
+                    horizontalLineTo(67f)
+                    arcTo(3f, 3f, 0f, false, true, 64f, 103f)
+                    verticalLineTo(102f)
+                    arcTo(3f, 3f, 0f, false, true, 67f, 99f)
+                    close()
+                }
+            }
+            layer("poseB", team = false, bounds = floatArrayOf(23f, 13f, 97f, 102.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 11f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(54f, 72f)
+                    lineTo(38f, 96f)
+                    moveTo(66f, 72f)
+                    lineTo(82f, 96f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF4B5D69)), width = 7f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(54f, 72f)
+                    lineTo(38f, 96f)
+                    moveTo(66f, 72f)
+                    lineTo(82f, 96f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 10f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(47f, 46f)
+                    lineTo(28f, 18f)
+                    moveTo(73f, 46f)
+                    lineTo(92f, 18f)
+                }
+                shape(fill = null, stroke = SolidColor(Color(0xFF6F8796)), width = 6f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(47f, 46f)
+                    lineTo(28f, 18f)
+                    moveTo(73f, 46f)
+                    lineTo(92f, 18f)
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(55f, 40f)
+                    horizontalLineTo(65f)
+                    arcTo(10f, 10f, 0f, false, true, 75f, 50f)
+                    verticalLineTo(64f)
+                    arcTo(10f, 10f, 0f, false, true, 65f, 74f)
+                    horizontalLineTo(55f)
+                    arcTo(10f, 10f, 0f, false, true, 45f, 64f)
+                    verticalLineTo(50f)
+                    arcTo(10f, 10f, 0f, false, true, 55f, 40f)
+                    close()
+                }
+            }
+            layer("poseB", team = true, bounds = floatArrayOf(23f, 13f, 97f, 102.5f)) {
+                shape(fill = TEAM_FILL, stroke = null, width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(48f, 58f)
+                    horizontalLineTo(72f)
+                    arcTo(2f, 2f, 0f, false, true, 74f, 60f)
+                    verticalLineTo(62f)
+                    arcTo(2f, 2f, 0f, false, true, 72f, 64f)
+                    horizontalLineTo(48f)
+                    arcTo(2f, 2f, 0f, false, true, 46f, 62f)
+                    verticalLineTo(60f)
+                    arcTo(2f, 2f, 0f, false, true, 48f, 58f)
+                    close()
+                }
+            }
+            layer("poseB", team = false, bounds = floatArrayOf(23f, 13f, 97f, 102.5f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(48f, 58f)
+                    horizontalLineTo(72f)
+                    arcTo(2f, 2f, 0f, false, true, 74f, 60f)
+                    verticalLineTo(62f)
+                    arcTo(2f, 2f, 0f, false, true, 72f, 64f)
+                    horizontalLineTo(48f)
+                    arcTo(2f, 2f, 0f, false, true, 46f, 62f)
+                    verticalLineTo(60f)
+                    arcTo(2f, 2f, 0f, false, true, 48f, 58f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF6F8796)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(48f, 28f)
+                    arcTo(12f, 12f, 0f, true, false, 72f, 28f)
+                    arcTo(12f, 12f, 0f, true, false, 48f, 28f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF7FD4FF)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(56.5f, 24f)
+                    horizontalLineTo(63.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 67f, 27.5f)
+                    verticalLineTo(27.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 63.5f, 31f)
+                    horizontalLineTo(56.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 53f, 27.5f)
+                    verticalLineTo(27.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 56.5f, 24f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF2B2F33)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(31f, 94f)
+                    horizontalLineTo(39f)
+                    arcTo(3f, 3f, 0f, false, true, 42f, 97f)
+                    verticalLineTo(98f)
+                    arcTo(3f, 3f, 0f, false, true, 39f, 101f)
+                    horizontalLineTo(31f)
+                    arcTo(3f, 3f, 0f, false, true, 28f, 98f)
+                    verticalLineTo(97f)
+                    arcTo(3f, 3f, 0f, false, true, 31f, 94f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF2B2F33)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(81f, 94f)
+                    horizontalLineTo(89f)
+                    arcTo(3f, 3f, 0f, false, true, 92f, 97f)
+                    verticalLineTo(98f)
+                    arcTo(3f, 3f, 0f, false, true, 89f, 101f)
+                    horizontalLineTo(81f)
+                    arcTo(3f, 3f, 0f, false, true, 78f, 98f)
+                    verticalLineTo(97f)
+                    arcTo(3f, 3f, 0f, false, true, 81f, 94f)
+                    close()
                 }
             }
         }
@@ -1498,7 +2858,7 @@ object OutpostArt {
                     close()
                 }
             }
-            layer("base", team = false, bounds = floatArrayOf(26.5f, 42.5f, 93.5f, 81.5f)) {
+            layer("base", team = false, bounds = floatArrayOf(26.5f, 42.5f, 116.5f, 114.5f)) {
                 shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
                     moveTo(28f, 44f)
                     lineTo(92f, 44f)
@@ -1539,6 +2899,58 @@ object OutpostArt {
                     quadTo(52f, 81f, 44f, 79f)
                     close()
                 }
+                shape(fill = null, stroke = SolidColor(Color(0xFF2B2F33)), width = 2f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(40f, 92f)
+                    quadTo(60f, 108f, 80f, 92f)
+                }
+                shape(fill = SolidColor(Color(0xFFC9CED2)), stroke = SolidColor(Color(0xFF15110D)), width = 2f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(57.5f, 99f)
+                    horizontalLineTo(62.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 66f, 102.5f)
+                    verticalLineTo(102.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 62.5f, 106f)
+                    horizontalLineTo(57.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 54f, 102.5f)
+                    verticalLineTo(102.5f)
+                    arcTo(3.5f, 3.5f, 0f, false, true, 57.5f, 99f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFFC9CED2)), stroke = SolidColor(Color(0xFF15110D)), width = 2f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(62.6f, 104f)
+                    arcTo(3.4f, 3.4f, 0f, true, false, 69.4f, 104f)
+                    arcTo(3.4f, 3.4f, 0f, true, false, 62.6f, 104f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFFE9B98C)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(95f, 106f)
+                    arcTo(9f, 7f, 0f, true, false, 113f, 106f)
+                    arcTo(9f, 7f, 0f, true, false, 95f, 106f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFF8D8F90)), stroke = SolidColor(Color(0xFF15110D)), width = 2f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(102.5f, 80f)
+                    horizontalLineTo(105.5f)
+                    arcTo(1.5f, 1.5f, 0f, false, true, 107f, 81.5f)
+                    verticalLineTo(83.5f)
+                    arcTo(1.5f, 1.5f, 0f, false, true, 105.5f, 85f)
+                    horizontalLineTo(102.5f)
+                    arcTo(1.5f, 1.5f, 0f, false, true, 101f, 83.5f)
+                    verticalLineTo(81.5f)
+                    arcTo(1.5f, 1.5f, 0f, false, true, 102.5f, 80f)
+                    close()
+                }
+                shape(fill = SolidColor(Color(0xFFF1E9DA)), stroke = SolidColor(Color(0xFF15110D)), width = 3f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(93f, 95f)
+                    arcTo(11f, 11f, 0f, true, false, 115f, 95f)
+                    arcTo(11f, 11f, 0f, true, false, 93f, 95f)
+                    close()
+                }
+            }
+            layer("tick", team = false, bounds = floatArrayOf(103f, 87f, 105f, 103f)) {
+                shape(fill = null, stroke = SolidColor(Color(0xFFD64545)), width = 2f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
+                    moveTo(104f, 102f)
+                    lineTo(104f, 88f)
+                }
             }
             layer("talk", team = false, bounds = floatArrayOf(50.75f, 81.75f, 69.25f, 84.25f)) {
                 shape(fill = null, stroke = SolidColor(Color(0xFF15110D)), width = 2.5f, cap = StrokeCap.Round, join = StrokeJoin.Round, alpha = 1f) {
@@ -1555,5 +2967,5 @@ object OutpostArt {
         }
     }
 
-    val all: List<SpriteArt> by lazy { listOf(Rifleman, Medic, Rocketeer, Buggy, Tank, Walker, HQ, Barracks, MotorPool, Sergeant) }
+    val all: List<SpriteArt> by lazy { listOf(Rifleman, Medic, Rocketeer, Buggy, Tank, Walker, HQ, Barracks, MotorPool, Yard, DrillSquat, DrillPushup, DrillSitup, DrillJacks, Sergeant) }
 }

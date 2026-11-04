@@ -1,0 +1,33 @@
+<svg viewBox="0 0 200 170" width="320" height="272" role="img" aria-label="HQ building sprite">
+<ellipse cx="100" cy="146" rx="82" ry="14" fill="#000" opacity="0.35"></ellipse>
+<g stroke="#15110d" stroke-width="3" stroke-linejoin="round">
+<path d="M22 120 L44 92 L156 92 L178 120 L156 144 L44 144 Z" fill="#8a8478"></path>
+<path d="M22 120 L44 144 L156 144 L178 120 Z" fill="#6c675d"></path>
+<path d="M60 96 Q62 56 100 54 Q138 56 140 96 Z" fill="#6f8796"></path>
+<path d="M66 82 Q100 72 134 82 L135 90 Q100 80 65 90 Z" fill="#7fd4ff" class="glow"></path>
+<path d="M60 96 L140 96 L140 102 L60 102 Z" fill="{{team}}"></path>
+<rect x="86" y="112" width="28" height="32" rx="3" fill="#3b3f44"></rect>
+<rect x="52" y="108" width="20" height="11" rx="3" fill="#ffd65a" class="flicker"></rect>
+<rect x="128" y="108" width="20" height="11" rx="3" fill="#ffd65a" class="flicker"></rect>
+<rect x="92" y="117" width="16" height="4" rx="2" fill="{{team}}" stroke="none"></rect>
+<path d="M82 64 L82 44" fill="none" stroke-width="3"></path>
+<g class="radar">
+<path d="M68 38 Q82 54 96 38 Z" fill="#c9ced2"></path>
+<path d="M82 44 L82 33" fill="none" stroke-width="2.5"></path>
+<circle cx="82" cy="32" r="2.5" fill="#ff5c5c" stroke-width="1.5"></circle>
+</g>
+<path d="M118 58 L132 18" fill="none" stroke-width="3"></path>
+<circle cx="132" cy="17" r="4.5" fill="#ff5c5c" class="blink"></circle>
+<path d="M56 96 L56 46" fill="none" stroke-width="3"></path>
+<g class="wave">
+<path d="M56 46 L84 50 L56 62 Z" fill="{{team}}"></path>
+<rect x="60" y="51" width="11" height="2.4" rx="1" fill="#1c1915" stroke="none"></rect>
+<rect x="58.5" y="48.5" width="3" height="7.4" rx="1" fill="#1c1915" stroke="none"></rect>
+<rect x="69.5" y="48.5" width="3" height="7.4" rx="1" fill="#1c1915" stroke="none"></rect>
+</g>
+<ellipse cx="40" cy="138" rx="10" ry="6" fill="#a2916f"></ellipse>
+<ellipse cx="56" cy="141" rx="10" ry="6" fill="#b09f7c"></ellipse>
+<ellipse cx="144" cy="141" rx="10" ry="6" fill="#a2916f"></ellipse>
+<ellipse cx="160" cy="138" rx="10" ry="6" fill="#b09f7c"></ellipse>
+</g>
+</svg>

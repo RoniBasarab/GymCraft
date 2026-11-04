@@ -1,0 +1,17 @@
+<svg viewBox="0 0 120 120" width="168" height="168" role="img" aria-label="Biter sprite">
+<ellipse cx="62" cy="98" rx="34" ry="7" fill="#000" opacity="0.35"></ellipse>
+<g stroke="#15110d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<g class="legsA"><path d="M48 80 L40 94 M68 82 L64 96" fill="none" stroke-width="4"></path></g>
+<g class="legsB"><path d="M58 82 L52 96 M78 80 L80 94" fill="none" stroke-width="4"></path></g>
+<g class="scuttle">
+<ellipse cx="64" cy="70" rx="30" ry="20" fill="#7b3f6b"></ellipse>
+<path d="M50 54 Q56 70 50 88 M66 50 Q72 70 66 90 M80 54 Q86 70 82 86" fill="none" stroke="#4a2341" stroke-width="2.5"></path>
+<path d="M44 58 Q60 46 82 52" fill="none" stroke="#a85a8f" stroke-width="3"></path>
+<ellipse cx="34" cy="74" rx="14" ry="12" fill="#d77a9b"></ellipse>
+<circle cx="30" cy="69" r="3" fill="#ffe066"></circle>
+<circle cx="38" cy="67" r="3" fill="#ffe066"></circle>
+<path d="M24 72 Q14 70 12 62" fill="none" class="chomp" stroke-width="3.5"></path>
+<path d="M24 80 Q14 82 12 90" fill="none" class="chompB" stroke-width="3.5"></path>
+</g>
+</g>
+</svg>
