@@ -1,3 +1,10 @@
+## 0.3.1
+- Home is the base, full screen: buildings on the back row ("Barracks 1"), the HQ and a new training yard in front, the army at the bottom.
+- The currency is protein (a protein tub on the top bar and on every price).
+- The boss forecast and the home card are one line each; a little recruit does the day's exercise.
+- "I went" is a lift: hold it and a barbell rises; at the top the troops cheer.
+- More life on the base: the Barracks door opens and a recruit peeks out, the garage door rolls up, the radar turns, windows flicker, the flag gusts, pull-ups and boxing in the yard.
+
 ## 0.3.0
 - The game is saved (one JSON file, written atomically, with a backup; a broken save is kept aside, never deleted).
 - Home: the base with your buildings and army, the drill sergeant, the next boss's forecast, "While you were away", the daily home card, and hold "I WENT" (+100).
