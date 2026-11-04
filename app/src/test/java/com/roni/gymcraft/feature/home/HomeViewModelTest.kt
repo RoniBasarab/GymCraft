@@ -55,7 +55,7 @@ class HomeViewModelTest {
     fun opens_ready_withTheBase() {
         val s = vm().state.value
         assertEquals(HomePhase.Ready, s.phase)
-        assertEquals(100, s.game?.supplies)
+        assertEquals(100, s.game?.protein)
         assertTrue(s.debugTools)
         assertFalse(s.problem)
     }
@@ -64,11 +64,13 @@ class HomeViewModelTest {
     fun iWent_paysOnce_andTheSergeantAnswers() {
         val vm = vm()
         vm.onAction(HomeAction.Went)
-        assertEquals("Good work, recruit. +100 supplies.", vm.state.value.reply)
-        assertEquals(200, vm.state.value.game?.supplies)
+        assertEquals("Good work, recruit. +100 protein.", vm.state.value.reply)
+        assertEquals(1, vm.state.value.cheers)
+        assertEquals(200, vm.state.value.game?.protein)
         assertTrue(vm.state.value.game?.wentToday == true)
         vm.onAction(HomeAction.Went)
         assertEquals("That's done for today, recruit.", vm.state.value.reply)
+        assertEquals(1, vm.state.value.cheers)   // a refused tap doesn't cheer
         vm.onAction(HomeAction.DismissReply)
         assertNull(vm.state.value.reply)
     }
@@ -82,11 +84,11 @@ class HomeViewModelTest {
         assertEquals(100, vm.state.value.sheet?.units?.get(0)?.total)
         vm.onAction(HomeAction.Train(Outpost.Rifleman))
         assertEquals("2 Riflemen ready.", vm.state.value.reply)
-        assertEquals(100, vm.state.value.game?.supplies)
+        assertEquals(100, vm.state.value.game?.protein)
         assertEquals(2, vm.state.value.sheet?.units?.get(0)?.ready)   // the open sheet follows the game
         assertEquals(2, vm.state.value.sheet?.units?.get(0)?.count)   // and keeps the pick
         vm.onAction(HomeAction.Upgrade)
-        assertEquals("Not enough supplies. A gym session brings 100.", vm.state.value.reply)
+        assertEquals("Not enough protein. A gym session brings 100.", vm.state.value.reply)
         vm.onAction(HomeAction.CloseSheet)
         assertNull(vm.state.value.sheet)
     }
@@ -123,7 +125,7 @@ class HomeViewModelTest {
         dir.deleteRecursively(); dir.writeText("not a folder")   // every save from now on fails
         vm.onAction(HomeAction.Went)
         assertTrue(vm.state.value.problem)
-        assertEquals(100, vm.state.value.game?.supplies)   // what's shown is what's on disk
+        assertEquals(100, vm.state.value.game?.protein)   // what's shown is what's on disk
         vm.onAction(HomeAction.Problem(ProblemAction.SendLog))
         assertEquals(listOf<ProblemAction>(ProblemAction.SendLog), rescued)
         assertTrue(File(logs, "gymcraft.log").readText().contains("failed: home.session"))

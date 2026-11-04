@@ -1,0 +1,25 @@
+<svg viewBox="0 0 120 120" width="168" height="168" role="img" aria-label="Sergeant sprite">
+<g stroke="#15110d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<path d="M14 118 L20 92 Q60 76 100 92 L106 118 Z" fill="#6f8796"></path>
+<path d="M18 104 Q60 92 102 104 L103 110 Q60 98 17 110 Z" fill="{{team}}"></path>
+<rect x="49" y="74" width="22" height="14" rx="4" fill="#d9a77a"></rect>
+<path d="M34 50 Q34 30 60 30 Q86 30 86 50 L84 68 Q80 84 60 86 Q40 84 36 68 Z" fill="#e9b98c"></path>
+<path d="M28 46 Q28 16 60 14 Q92 16 92 46 L92 50 L28 50 Z" fill="#5d7280"></path>
+<path d="M28 44 L92 44 L92 51 L28 51 Z" fill="{{team}}"></path>
+<path d="M40 58 L54 61" fill="none" stroke-width="5"></path>
+<path d="M80 58 L66 61" fill="none" stroke-width="5"></path>
+<ellipse cx="48" cy="65" rx="3.5" ry="2.5" fill="#15110d"></ellipse>
+<ellipse cx="72" cy="65" rx="3.5" ry="2.5" fill="#15110d"></ellipse>
+<path d="M60 64 L57 73 L62 74" fill="none" stroke-width="2.5"></path>
+<path d="M44 79 Q52 73 60 76 Q68 73 76 79 Q68 81 60 79 Q52 81 44 79 Z" fill="#4a3020"></path>
+<path d="M40 92 Q60 108 80 92" fill="none" stroke="#2b2f33" stroke-width="2"></path>
+<rect x="54" y="99" width="12" height="7" rx="3.5" fill="#c9ced2" stroke-width="2"></rect>
+<circle cx="66" cy="104" r="3.4" fill="#c9ced2" stroke-width="2"></circle>
+<ellipse cx="104" cy="106" rx="9" ry="7" fill="#e9b98c"></ellipse>
+<rect x="101" y="80" width="6" height="5" rx="1.5" fill="#8d8f90" stroke-width="2"></rect>
+<circle cx="104" cy="95" r="11" fill="#f1e9da"></circle>
+<g class="tick"><path d="M104 102 L104 88" fill="none" stroke="#d64545" stroke-width="2"></path></g>
+<g class="talk"><path d="M52 83 L68 83" fill="none" stroke-width="2.5"></path></g>
+<path d="M76 62 L82 72" fill="none" stroke="#c98d6a" stroke-width="2"></path>
+</g>
+</svg>

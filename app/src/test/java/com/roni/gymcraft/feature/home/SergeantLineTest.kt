@@ -55,8 +55,8 @@ class SergeantLineTest {
     @Test
     fun session_andRally() {
         val s = newGame()
-        assertEquals("Good work, recruit. +100 supplies.", SergeantLine.session(Change.Ok(s, 100, rally = false)))
-        assertEquals("You're back. The troops noticed. Rally bonus: +100. +200 supplies.", SergeantLine.session(Change.Ok(s, 200, rally = true)))
+        assertEquals("Good work, recruit. +100 protein.", SergeantLine.session(Change.Ok(s, 100, rally = false)))
+        assertEquals("You're back. The troops noticed. Rally bonus: +100. +200 protein.", SergeantLine.session(Change.Ok(s, 200, rally = true)))
     }
 
     @Test

@@ -1,0 +1,54 @@
+<svg viewBox="0 0 200 150" width="320" height="240" role="img" aria-label="Training yard sprite">
+<ellipse cx="100" cy="136" rx="92" ry="11" fill="#000" opacity="0.3"></ellipse>
+<g stroke="#15110d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<ellipse cx="60" cy="134" rx="40" ry="7" fill="#a2916f"></ellipse>
+<path d="M28 134 L28 40 M92 134 L92 40" fill="none" stroke-width="9"></path>
+<path d="M28 134 L28 40 M92 134 L92 40" fill="none" stroke="#5a5e35" stroke-width="5"></path>
+<path d="M24 42 L96 42" fill="none" stroke-width="7"></path>
+<path d="M24 42 L96 42" fill="none" stroke="#c9ced2" stroke-width="3.5"></path>
+<g class="poseA">
+<path d="M52 44 L54 72 M68 44 L66 72" fill="none" stroke-width="8"></path>
+<path d="M52 44 L54 72 M68 44 L66 72" fill="none" stroke="#6f8796" stroke-width="4"></path>
+<rect x="48" y="68" width="24" height="30" rx="9" fill="#6f8796"></rect>
+<rect x="49" y="82" width="22" height="5" rx="2" fill="{{team}}"></rect>
+<circle cx="60" cy="60" r="10" fill="#6f8796"></circle>
+<rect x="60" y="56" width="11" height="6" rx="3" fill="#7fd4ff"></rect>
+<path d="M54 98 L52 122 M66 98 L68 122" fill="none" stroke-width="9"></path>
+<path d="M54 98 L52 122 M66 98 L68 122" fill="none" stroke="#4b5d69" stroke-width="5"></path>
+</g>
+<g class="poseB">
+<path d="M52 44 L50 54 L56 60 M68 44 L70 54 L64 60" fill="none" stroke-width="8"></path>
+<path d="M52 44 L50 54 L56 60 M68 44 L70 54 L64 60" fill="none" stroke="#6f8796" stroke-width="4"></path>
+<rect x="48" y="52" width="24" height="30" rx="9" fill="#6f8796"></rect>
+<rect x="49" y="66" width="22" height="5" rx="2" fill="{{team}}"></rect>
+<circle cx="60" cy="36" r="10" fill="#6f8796"></circle>
+<rect x="60" y="32" width="11" height="6" rx="3" fill="#7fd4ff"></rect>
+<path d="M54 82 L50 100 L56 108 M66 82 L70 100 L64 108" fill="none" stroke-width="9"></path>
+<path d="M54 82 L50 100 L56 108 M66 82 L70 100 L64 108" fill="none" stroke="#4b5d69" stroke-width="5"></path>
+</g>
+<path d="M124 134 L124 32 L160 32" fill="none" stroke-width="9"></path>
+<path d="M124 134 L124 32 L160 32" fill="none" stroke="#5a5e35" stroke-width="5"></path>
+<path d="M116 134 L132 134" fill="none" stroke-width="5"></path>
+<g class="swing">
+<path d="M154 32 L154 46" fill="none" stroke-width="2.5"></path>
+<rect x="144" y="46" width="20" height="44" rx="9" fill="#b5523b"></rect>
+<path d="M144 56 L164 56 M144 80 L164 80" fill="none" stroke="#7d3426" stroke-width="2.5"></path>
+</g>
+<rect x="176" y="112" width="8" height="22" rx="3" fill="#4b5d69"></rect>
+<rect x="186" y="112" width="8" height="22" rx="3" fill="#4b5d69"></rect>
+<rect x="172" y="80" width="26" height="36" rx="9" fill="#6f8796"></rect>
+<rect x="173" y="96" width="24" height="5" rx="2" fill="{{team}}"></rect>
+<circle cx="184" cy="68" r="11" fill="#6f8796"></circle>
+<rect x="171" y="63" width="11" height="6" rx="3" fill="#7fd4ff"></rect>
+<g class="punchA">
+<path d="M176 90 L168 98" fill="none" stroke-width="9"></path>
+<path d="M176 90 L168 98" fill="none" stroke="#6f8796" stroke-width="5"></path>
+<circle cx="166" cy="96" r="6" fill="#d64545"></circle>
+</g>
+<g class="punchB">
+<path d="M176 88 L162 82" fill="none" stroke-width="9"></path>
+<path d="M176 88 L162 82" fill="none" stroke="#6f8796" stroke-width="5"></path>
+<circle cx="161" cy="81" r="6" fill="#d64545"></circle>
+</g>
+</g>
+</svg>

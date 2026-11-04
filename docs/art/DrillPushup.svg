@@ -1,0 +1,24 @@
+<svg viewBox="0 0 120 120" width="168" height="168" role="img" aria-label="Recruit doing push-ups">
+<ellipse cx="60" cy="104" rx="44" ry="6" fill="#000" opacity="0.35"></ellipse>
+<g stroke="#15110d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<g class="poseA">
+<path d="M84 74 L86 100" fill="none" stroke-width="9"></path>
+<path d="M84 74 L86 100" fill="none" stroke="#6f8796" stroke-width="5"></path>
+<path d="M18 98 L80 72" fill="none" stroke-width="16"></path>
+<path d="M18 98 L80 72" fill="none" stroke="#6f8796" stroke-width="12"></path>
+<path d="M18 98 L44 87" fill="none" stroke="#4b5d69" stroke-width="12"></path>
+<circle cx="94" cy="64" r="10" fill="#6f8796"></circle>
+<rect x="95" y="60" width="10" height="6" rx="3" fill="#7fd4ff"></rect>
+</g>
+<g class="poseB">
+<path d="M82 90 L72 94 L84 100" fill="none" stroke-width="9"></path>
+<path d="M82 90 L72 94 L84 100" fill="none" stroke="#6f8796" stroke-width="5"></path>
+<path d="M18 98 L82 88" fill="none" stroke-width="16"></path>
+<path d="M18 98 L82 88" fill="none" stroke="#6f8796" stroke-width="12"></path>
+<path d="M18 98 L44 94" fill="none" stroke="#4b5d69" stroke-width="12"></path>
+<circle cx="95" cy="84" r="10" fill="#6f8796"></circle>
+<rect x="96" y="80" width="10" height="6" rx="3" fill="#7fd4ff"></rect>
+</g>
+<rect x="8" y="98" width="12" height="6" rx="3" fill="#2b2f33"></rect>
+</g>
+</svg>

@@ -1,0 +1,30 @@
+<svg viewBox="0 0 120 120" width="168" height="168" role="img" aria-label="Walker sprite">
+<ellipse cx="60" cy="106" rx="30" ry="7" fill="#000" opacity="0.35"></ellipse>
+<g stroke-linejoin="round">
+<g class="stepA">
+<path d="M50 66 L40 86 L48 100" fill="none" stroke="#15110d" stroke-width="11" stroke-linecap="round"></path>
+<path d="M50 66 L40 86 L48 100" fill="none" stroke="#5a5e35" stroke-width="5" stroke-linecap="round"></path>
+<rect x="38" y="98" width="22" height="7" rx="3" fill="#2b2f33" stroke="#15110d" stroke-width="3"></rect>
+</g>
+<g class="stepB">
+<path d="M68 66 L60 86 L68 100" fill="none" stroke="#15110d" stroke-width="11" stroke-linecap="round"></path>
+<path d="M68 66 L60 86 L68 100" fill="none" stroke="#6e733f" stroke-width="5" stroke-linecap="round"></path>
+<rect x="58" y="98" width="22" height="7" rx="3" fill="#2b2f33" stroke="#15110d" stroke-width="3"></rect>
+</g>
+<g class="bob" stroke="#15110d" stroke-width="3">
+<ellipse cx="59" cy="52" rx="28" ry="19" fill="#7a7f4a"></ellipse>
+<path d="M34 58 Q59 66 84 58 L84 62 Q59 71 34 62 Z" fill="{{team}}"></path>
+<ellipse cx="70" cy="46" rx="13" ry="9" fill="#7fd4ff"></ellipse>
+<rect x="72" y="42" width="6" height="3" rx="1.5" fill="#ffffff" stroke="none"></rect>
+<rect x="44" y="30" width="5" height="12" rx="2" fill="#4a4e2c"></rect>
+<circle cx="46.5" cy="29" r="3" fill="#ffd65a"></circle>
+</g>
+<g class="recoil" stroke="#15110d" stroke-width="3">
+<rect x="70" y="58" width="38" height="9" rx="2" fill="#4a4f55"></rect>
+<rect x="104" y="56" width="7" height="13" rx="2" fill="#3b3f44"></rect>
+</g>
+<g class="flash">
+<polygon points="111,62 120,55 117,62 121,69 111,65" fill="#ffd65a"></polygon>
+</g>
+</g>
+</svg>

@@ -1,4 +1,4 @@
-# GymCraft codemap (0.3.0)
+# GymCraft codemap (0.3.1)
 
 One line per source file.
 
@@ -62,13 +62,15 @@ One line per source file.
 - `app/src/main/java/com/roni/gymcraft/designsystem/Theme.kt` — dark Material 3 color scheme and `GymColors` for Canvas drawing.
 - `app/src/main/java/com/roni/gymcraft/designsystem/ErrorCard.kt` — "Something went wrong" with Restart app and Send log.
 - `app/src/main/java/com/roni/gymcraft/designsystem/GymSheet.kt` — the bottom sheet used by building details.
-- `app/src/main/java/com/roni/gymcraft/designsystem/HoldButton.kt` — the hold-to-confirm button ("I WENT").
+- `app/src/main/java/com/roni/gymcraft/designsystem/LiftButton.kt` — the hold-to-confirm lift ("I WENT"): the barbell rises, the troops cheer at the top.
 - `app/src/main/java/com/roni/gymcraft/designsystem/sprites/CutoutSprites.kt` — builds the cutout part bitmaps (body, weapon, flash, stripe) and the badge layouts once; `rememberCutoutSprites()`.
 - `app/src/main/java/com/roni/gymcraft/designsystem/sprites/SpriteArt.kt` — art ids to sprite parts for the game's races.
 - `app/src/main/java/com/roni/gymcraft/designsystem/sprites/SpriteDrawing.kt` — draws a sprite from its parts with translate/rotate/scale.
 - `app/src/main/java/com/roni/gymcraft/designsystem/sprites/content/OutpostArt.kt` — the Outpost sprites (generated from the canvas, render-checked).
 - `app/src/main/java/com/roni/gymcraft/designsystem/sprites/content/BroodArt.kt` — the Brood sprites (generated from the canvas, render-checked).
-- `app/src/main/java/com/roni/gymcraft/designsystem/sprites/content/SpriteIndex.kt` — the art registry: `ArtId` to sprite.
+- `app/src/main/java/com/roni/gymcraft/designsystem/sprites/content/SpriteIndex.kt` — the art registry: `ArtId` to sprite (including the 0.3.1 pieces: yard, drill, portrait, protein).
+- `app/src/main/java/com/roni/gymcraft/designsystem/sprites/content/UiArt.kt` — the UI art (the protein tub and the base's new life pieces).
+- `docs/art/*.svg` — the sprites' SVG sources. Documentation only; nothing builds from them.
 - `app/src/main/res/xml/file_paths.xml` — what the log FileProvider may share: only the logs folder.
 
 ## :app — navigation and screens

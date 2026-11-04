@@ -41,8 +41,8 @@ object SergeantLine {
 
     /** What he says right after "I went" (and the hold-to-confirm finished). */
     fun session(change: Change.Ok): String =
-        if (change.rally) "You're back. The troops noticed. Rally bonus: +${change.gained - 100}. +${change.gained} supplies."
-        else "Good work, recruit. +${change.gained} supplies."
+        if (change.rally) "You're back. The troops noticed. Rally bonus: +${change.gained - 100}. +${change.gained} protein."
+        else "Good work, recruit. +${change.gained} protein."
 
     /** One row of the "While you were away" card. */
     fun result(outcome: BattleOutcome, content: GameContent): String {

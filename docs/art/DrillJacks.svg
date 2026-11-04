@@ -1,0 +1,29 @@
+<svg viewBox="0 0 120 120" width="168" height="168" role="img" aria-label="Recruit doing jumping jacks">
+<ellipse cx="60" cy="106" rx="30" ry="6" fill="#000" opacity="0.35"></ellipse>
+<g stroke="#15110d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<g class="poseA">
+<path d="M54 76 L52 100 M66 76 L68 100" fill="none" stroke-width="11"></path>
+<path d="M54 76 L52 100 M66 76 L68 100" fill="none" stroke="#4b5d69" stroke-width="7"></path>
+<path d="M46 52 L40 80 M74 52 L80 80" fill="none" stroke-width="10"></path>
+<path d="M46 52 L40 80 M74 52 L80 80" fill="none" stroke="#6f8796" stroke-width="6"></path>
+<rect x="45" y="44" width="30" height="34" rx="10" fill="#6f8796"></rect>
+<rect x="46" y="62" width="28" height="6" rx="2" fill="{{team}}"></rect>
+<circle cx="60" cy="32" r="12" fill="#6f8796"></circle>
+<rect x="53" y="28" width="14" height="7" rx="3.5" fill="#7fd4ff"></rect>
+<rect x="42" y="99" width="14" height="7" rx="3" fill="#2b2f33"></rect>
+<rect x="64" y="99" width="14" height="7" rx="3" fill="#2b2f33"></rect>
+</g>
+<g class="poseB">
+<path d="M54 72 L38 96 M66 72 L82 96" fill="none" stroke-width="11"></path>
+<path d="M54 72 L38 96 M66 72 L82 96" fill="none" stroke="#4b5d69" stroke-width="7"></path>
+<path d="M47 46 L28 18 M73 46 L92 18" fill="none" stroke-width="10"></path>
+<path d="M47 46 L28 18 M73 46 L92 18" fill="none" stroke="#6f8796" stroke-width="6"></path>
+<rect x="45" y="40" width="30" height="34" rx="10" fill="#6f8796"></rect>
+<rect x="46" y="58" width="28" height="6" rx="2" fill="{{team}}"></rect>
+<circle cx="60" cy="28" r="12" fill="#6f8796"></circle>
+<rect x="53" y="24" width="14" height="7" rx="3.5" fill="#7fd4ff"></rect>
+<rect x="28" y="94" width="14" height="7" rx="3" fill="#2b2f33"></rect>
+<rect x="78" y="94" width="14" height="7" rx="3" fill="#2b2f33"></rect>
+</g>
+</g>
+</svg>

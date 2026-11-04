@@ -1,0 +1,22 @@
+<svg viewBox="0 0 130 120" width="182" height="168" role="img" aria-label="Buggy sprite">
+<ellipse cx="62" cy="100" rx="46" ry="8" fill="#000" opacity="0.35"></ellipse>
+<g stroke="#15110d" stroke-width="3" stroke-linejoin="round">
+<g class="bounce">
+<path d="M50 52 L57 33 L77 33 L84 50" fill="none" stroke="#2b2f33" stroke-width="5"></path>
+<path d="M16 70 L28 54 L86 50 L108 62 L108 80 L16 80 Z" fill="#8a8f52"></path>
+<path d="M28 62 L100 60 L102 67 L27 69 Z" fill="{{team}}"></path>
+<circle cx="66" cy="42" r="9" fill="#6f8796"></circle>
+<rect x="67" y="38" width="10" height="7" rx="3" fill="#7fd4ff"></rect>
+<g class="recoil">
+<rect x="72" y="44" width="34" height="6" rx="2" fill="#4a4f55"></rect>
+</g>
+<g class="flash" stroke="none">
+<polygon points="106,47 116,42 113,47 119,52 106,50" fill="#ffd65a"></polygon>
+</g>
+</g>
+<circle cx="34" cy="84" r="13" fill="#2b2f33"></circle>
+<circle cx="90" cy="84" r="13" fill="#2b2f33"></circle>
+<g class="spin"><circle cx="34" cy="84" r="5" fill="#8d8f90"></circle><path d="M34 75 V93 M25 84 H43" stroke="#55595e" stroke-width="2"></path></g>
+<g class="spin"><circle cx="90" cy="84" r="5" fill="#8d8f90"></circle><path d="M90 75 V93 M81 84 H99" stroke="#55595e" stroke-width="2"></path></g>
+</g>
+</svg>

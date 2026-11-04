@@ -1,0 +1,10 @@
+<svg viewBox="0 0 64 64" width="128" height="128" role="img" aria-label="Protein tub icon">
+<g stroke="#15110d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<path d="M14 22 L50 22 L47 58 Q32 61 17 58 Z" fill="#f1e9da"></path>
+<path d="M16 31 L48 31 L46.6 48 L17.4 48 Z" fill="#e07b28"></path>
+<rect x="11" y="12" width="42" height="11" rx="4" fill="#3b3f44"></rect>
+<rect x="24" y="38" width="16" height="3" rx="1.2" fill="#1c1915" stroke="none"></rect>
+<rect x="21" y="34.5" width="4.5" height="10" rx="1.5" fill="#1c1915" stroke="none"></rect>
+<rect x="38.5" y="34.5" width="4.5" height="10" rx="1.5" fill="#1c1915" stroke="none"></rect>
+</g>
+</svg>

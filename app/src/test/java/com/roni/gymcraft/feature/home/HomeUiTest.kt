@@ -29,14 +29,15 @@ class HomeUiTest {
     @Test
     fun aNewGame_showsTheBaseAndTheForecast() {
         val g = HomeUi.game(snap(newGame()), c)
-        assertEquals(100, g.supplies)
+        assertEquals(100, g.protein)
         assertEquals(listOf("Barracks", "Motor Pool"), g.buildings.map { it.name })
         assertTrue(g.army.isEmpty())
         assertFalse(g.wentToday)
         assertEquals("Boss · Sat 20:00", g.forecast?.title)
         assertEquals(Outpost.race.hq.art, g.hq)
         assertEquals("Tue 3 Nov 09:00", g.time)
-        assertTrue(g.card.text in HomeCards.all && !g.card.done)
+        val card = HomeCards.forDay(tuesday.toLocalDate(), 1L)
+        assertEquals(HomeCardUi(card.text, false, card.move, card.hold), g.card)
     }
 
     @Test
@@ -89,13 +90,15 @@ class HomeUiTest {
         assertEquals("3 Riflemen ready.", HomeUi.trained("Rifleman", 3))
         assertEquals("1 Tank ready.", HomeUi.trained("Tank", 1))
         val sheet = HomeUi.sheet(snap(newGame()), c, Outpost.Barracks, emptyMap()) ?: throw AssertionError()
-        assertEquals("Barracks: level 2. Medics unlocked.", HomeUi.upgraded(sheet, c))
+        assertEquals("Barracks 2. Medics unlocked.", HomeUi.upgraded(sheet, c))
     }
 
     @Test
     fun theHomeCard_isFixedForTheDay_andVaries() {
         assertEquals(HomeCards.forDay(start, 1L), HomeCards.forDay(start, 1L))
-        val week = (0L until 14L).map { HomeCards.forDay(start.plusDays(it), 1L) }.toSet()
+        val week = (0L until 14L).map { HomeCards.forDay(start.plusDays(it), 1L).text }.toSet()
+        assertTrue(HomeCards.all.filter { it.hold }.map { it.text } == listOf("30-second plank", "45-second wall sit"))
+        assertTrue(HomeCards.all.all { it.move in setOf("squat", "pushup", "situp", "jacks") })
         assertTrue("a fortnight should show several cards: $week", week.size >= 5)
         val after = Economy.homeCard(newGame(), tuesday.toLocalDate(), tuesday.toLocalDate()) as Change.Ok
         assertTrue(HomeUi.game(snap(after.state), c).card.done)

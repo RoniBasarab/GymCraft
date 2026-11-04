@@ -1,6 +1,6 @@
 # GymCraft: planning handoff
 
-Last updated: 3 Nov 2026 (Task-3 written). For the planning agent (a Claude chat with Roni). The working agent doesn't read this file.
+Last updated: 3 Nov 2026, late (Task-3 done by Roni on the phone; Task-3.1 written). For the planning agent (a Claude chat with Roni). The working agent doesn't read this file.
 
 ## People and flow
 
@@ -19,6 +19,8 @@ Last updated: 3 Nov 2026 (Task-3 written). For the planning agent (a Claude chat
 - **Art:** the "GymCraft Sprites" canvas (Outpost units and buildings, Brood attackers, the sergeant). The planner's generator turns the canvas SVGs into Kotlin `ImageVector` layers per moving part (`OutpostArt.kt`, `BroodArt.kt`; render-checked, at most 0.16% of pixels off; the tread dash is drawn as a plain stroke).
 - **Gym visits:** a manual hold-to-confirm button. No geofencing.
 - **Squads with count badges** (Roni's idea): one badge above each squad, wounded below.
+- **0.3.0 feedback (3 Nov):** the game must fill the screen; cards too big; "Lv 1" labels ran together (now "Barracks 1"); not gym-like enough. Roni chose: full screen with overlays, one-line boss and home card, door and HQ animations, all four gym ideas (training yard, animated home card, the lift, gym gear), the currency renamed **protein**.
+- **Art sources:** `docs/art/*.svg` in the repo; the generator is the planner's (`artgen/gen.py`: classes become parts, a moving part's layers share one union box for pivots). Canvas boards: Units, Buildings, Brood, "0.3.1 · Gym life", "An attack · Task 4 idea".
 
 ## Roadmap
 
@@ -27,8 +29,11 @@ Last updated: 3 Nov 2026 (Task-3 written). For the planning agent (a Claude chat
 3. **Task-3 = 0.3.0** (written 3 Nov): save, Home, buildings, leave, failures, debug time travel.
    - **Verified in the planner's harness (67 tests across engine and app):** SaveCodec, SaveStore, GameRepository, GameClock, SergeantLine, HomeUi, HomeCards, HomeViewModel (driven through onAction on a real repository).
    - **Planner-written, not compiled:** the Compose UI (BaseView, HomeScreen, HoldButton, GymSheet, ErrorCard, SpriteDrawing), AppModule, AppRescue.
-4. **Task-4:** the battle player plus Watch / Rewatch (muzzle anchors from the art, lane spacing, badges), battles resolved on schedule while the app is open, notifications (Wednesday 18:00 forecast, results).
-5. **Later:** seasons and perks; real art; more races. Possible optimization: crop each sprite layer's ImageVector to its bounds (less bitmap memory) before the battle player draws many sprites.
+4. **Task-3.1 = 0.3.1** (written 3 Nov): the base is the screen, protein, the lift, the yard, the drill recruit, more idle life. Verified: Home logic and art (67 harness tests); planner-written: LiftButton, SpriteDrawing, BaseView, HomeScreen.
+5. **Task-4:** the battle player plus Watch / Rewatch (muzzle anchors from the art, lane spacing, badges), battles resolved on schedule while the app is open, notifications (Wednesday 18:00 forecast, results).
+   The battle screen follows the "An attack" board (Roni asked how an attack would look; the mock is waiting for his OK): one lane, the HQ at the left edge, squads with count and health bar, the Brood from the right, shots from muzzles, both armies' strength on top, Pause / ×1 / ×2 / Skip.
+6. **Upgrade cards** (decided 4 Nov, game-design.md §13): a pick-1-of-3 draft after every boss battle; no plain stat bumps; ~80-100 mechanics with ranks and per-race versions (400+ offers); engine hooks; balance test with random drafts. Open: does a comeback improve the draw (a 4th card or a rarer tier)? Planner's default: yes, a 4th card.
+7. **Later:** seasons and perks; real art; more races. Possible optimization: crop each sprite layer's ImageVector to its bounds (less bitmap memory) before the battle player draws many sprites.
 
 ## Roni's preferences that matter here
 

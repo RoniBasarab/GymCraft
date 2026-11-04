@@ -1,0 +1,18 @@
+<svg viewBox="0 0 120 120" width="168" height="168" role="img" aria-label="Spitter sprite">
+<ellipse cx="62" cy="102" rx="30" ry="7" fill="#000" opacity="0.35"></ellipse>
+<g stroke="#15110d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<path d="M52 90 L46 102 M70 90 L74 102" fill="none" stroke-width="5"></path>
+<ellipse cx="62" cy="70" rx="22" ry="24" fill="#7b3f6b"></ellipse>
+<g class="pulse">
+<circle cx="74" cy="50" r="16" fill="#9be564"></circle>
+<circle cx="70" cy="45" r="4" fill="#d9f7b8" stroke="none"></circle>
+</g>
+<path d="M50 56 Q40 50 34 54 Q28 58 30 66 Q34 72 46 70 Z" fill="#d77a9b"></path>
+<circle cx="38" cy="58" r="2.8" fill="#ffe066"></circle>
+<circle cx="44" cy="56" r="2.8" fill="#ffe066"></circle>
+<path d="M30 64 Q34 66 38 64" fill="none" stroke-width="2.5"></path>
+</g>
+<g class="spit" stroke="#15110d" stroke-width="2">
+<circle cx="26" cy="64" r="5" fill="#9be564"></circle>
+</g>
+</svg>
