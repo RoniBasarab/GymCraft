@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -230,7 +231,7 @@ private fun HomeCardRow(game: GameUi, onAction: (HomeAction) -> Unit) {
 }
 
 @Composable
-private fun StripRow(vertical: Dp = 8.dp, content: @Composable () -> Unit) {
+private fun StripRow(vertical: Dp = 8.dp, content: @Composable RowScope.() -> Unit) {
     Row(
         Modifier.fillMaxWidth().background(BaseSky.copy(alpha = 0.85f), RoundedCornerShape(10.dp)).padding(horizontal = 10.dp, vertical = vertical),
         verticalAlignment = Alignment.CenterVertically,
